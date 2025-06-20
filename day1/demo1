@@ -1,1 +1,12 @@
 
+package jsds1;
+
+public class MyFstDemo {
+
+	public static void main(String[] args) {
+		
+		System.out.println("hello world");
+		
+	}
+	
+}

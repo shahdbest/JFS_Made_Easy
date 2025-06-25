@@ -1,0 +1,22 @@
+
+public class Demo1 {
+
+	 void disp(){
+	System.out.println("disp function");	
+	}
+	 
+	// int main=10;
+	//primary thread -> execution path of a program
+	public static void main(String[] args) {	
+		Demo1 demo1=new Demo1();
+		demo1.disp();		
+		System.out.println("Hello world");
+	
+	}
+	
+	public static void myMain(String[] args) {
+				System.out.println("Hello world!! this my main");
+	
+	}
+	
+}

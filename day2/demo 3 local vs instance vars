@@ -1,0 +1,34 @@
+
+public class Demo1 {
+	
+	//local
+	//instance
+	//class variable
+	
+	int instVar; //instance
+	
+	void disp() {
+		
+		int test; //local var
+		test=9;
+		System.out.println(test);
+		System.out.println(instVar);
+		
+	}
+	
+	void abc() {
+		//System.out.println(test); local vars can only be called within the function where they r declared
+		System.out.println("abc "+instVar);
+		
+	}
+	
+	
+	public static void main(String[] args) {	
+		
+		Demo1 demo1=new Demo1();
+			demo1.disp();
+			demo1.abc();
+	}
+	
+	
+}

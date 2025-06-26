@@ -1,0 +1,50 @@
+
+// data types --
+
+//primitive - class type
+
+/* 8bits , 16b , 32b, 64b
+ * byte short int long
+	
+ * float double
+ * char
+ * boolean
+ * 
+ * */
+
+public class Demo1 {
+			
+		public static void main(String[] args) {	
+	
+			
+			byte a1=100;
+			int a2=a1; // implicit 
+			
+			System.out.println(a2);
+			
+			int x1=100;
+			byte x2=(byte)x1; //explicit 
+			
+			System.out.println("x2 =" +x2);
+			
+			
+			int b1=200;
+			byte b2=(byte)b1; //explicit 
+			
+			System.out.println("b2 =" +b2);
+			
+			float f1=10.5f;
+			
+			// compiler reads all the decimal values as double by default
+			
+			//float f2=15.5;
+			
+			double d1=15.5;
+			float fd1=(float)d1;
+			
+			float f11=(float)20.5;
+			float f22=20.5f ; //same as the above line both r type casting
+			//both convert double into float
+		}
+		
+}

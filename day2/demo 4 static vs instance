@@ -1,0 +1,35 @@
+
+public class Demo1 {
+	
+	//local
+	//instance
+	//class variable - static variables
+	
+	int instVar; //instance
+	static int statVar=88;
+	 
+	void disp() {
+		
+		int test=9;
+		System.out.println(test);
+		System.out.println(instVar);
+		System.out.println(statVar);
+	}
+	
+	static void abc() {
+		//System.out.println("abc "+instVar);
+		System.out.println(statVar);		
+	}
+	
+	
+	public static void main(String[] args) {	
+		
+		Demo1 demo1=new Demo1();
+			demo1.disp();
+			abc();
+	
+	System.out.println("main "+statVar);
+	}
+	
+	
+}

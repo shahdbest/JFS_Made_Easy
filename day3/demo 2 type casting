@@ -1,0 +1,31 @@
+
+// data types --
+
+//primitive - class type
+
+/* 8bits , 16b , 32b, 64b
+ * byte short int long
+ * float double
+ * char
+ * boolean
+ * 
+ * */
+
+public class Demo1 {
+			
+		public static void main(String[] args) {	
+	
+			
+			byte a1=100;
+			int a2=a1; // implicit 
+			
+			System.out.println(a2);
+			
+			int x1=100;
+			byte x2=(byte)x1; //explicit 
+			
+			System.out.println("x2 =" +x2);
+			
+		}
+		
+}

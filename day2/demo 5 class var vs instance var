@@ -1,0 +1,33 @@
+
+public class Demo1 {
+	
+	//local
+	//instance
+	//class variable - static variables
+	
+	
+	int inst;
+	static int stat;
+	
+	void test()
+	{
+		System.out.println(stat);
+		System.out.println(inst);
+		
+	}
+	
+	public static void main(String[] args) {	
+		
+		System.out.println(stat);
+		//System.out.println(inst); error
+		
+		Demo1 demo1=new Demo1();
+		System.out.println(demo1.inst);
+		
+		//demo1=null;
+		//System.out.println(demo1.inst); nullpointer -> memory is dealocated
+	
+	}
+	
+	
+}

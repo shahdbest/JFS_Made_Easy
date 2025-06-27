@@ -1,0 +1,33 @@
+
+//Datatype 
+
+//primitive type - simple values 
+/* 8bits , 16bits , 32bits , 64bits
+ * byte , short , int ,long
+ * float , double
+ * char
+ * boolean 
+ * */
+
+
+//class type : objects 
+
+public class Demo1 {
+	
+	public static void main(String[] args) {	
+	
+		float a=10.5f;
+
+		//compiler reads all decimal values as double by default
+		
+		float b=(float)10.5;
+
+		double d=10.5;
+		float f=(float)d;
+		
+		System.out.println(a);
+		System.out.println(b);
+		System.out.println(f);
+	}
+	
+}

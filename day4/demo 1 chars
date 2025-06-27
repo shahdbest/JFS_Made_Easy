@@ -1,0 +1,40 @@
+
+// data types --
+
+//primitive---(simple values) - class type (Object)
+
+/* 8bits , 16b , 32b, 64b
+ * byte short int long
+	
+ * float double
+ * char ->
+ * boolean
+ * 
+ * */
+
+public class Demo1 {
+			
+		public static void main(String[] args) {	
+			
+			long number=998877665544L;
+			
+			//char ch='65';//error
+			
+			char ch1=65; //implicit cast
+		
+			System.out.println(ch1);
+
+			int x=65; //4 bytes
+			char y=(char)x;
+			
+			System.out.println(y);
+		
+			char ch='B';
+			System.out.println(ch);
+		
+			int in=ch;
+			System.out.println(in);
+			
+		}
+		
+}

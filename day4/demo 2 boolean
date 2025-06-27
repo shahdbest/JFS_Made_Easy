@@ -1,0 +1,29 @@
+
+// data types --
+
+//primitive---(simple values) - class type (Object) 
+
+/* 8bits , 16b , 32b, 64b
+ * byte short int long (0)
+	
+ * float double (0.0)
+ * char -> (/u0000)
+ * boolean ->false
+ * 
+ * class types are null by default
+ * */
+
+public class Demo1 {
+	
+	static boolean x;
+		public static void main(String[] args) {	
+			
+	
+		System.out.println(x);
+	
+		boolean y=true;
+		System.out.println(y);
+				
+		}
+		
+}

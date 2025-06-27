@@ -1,0 +1,25 @@
+
+//Datatype 
+
+//primitive type - simple values 
+/* 8bits , 16bits , 32bits , 64bits
+ * byte , short , int ,long
+ * float , double
+ * char
+ * boolean 
+ * */
+
+
+//class type : objects 
+
+public class Demo1 {
+	
+	public static void main(String[] args) {	
+
+		long l=998877665544L;
+		
+		
+		System.out.println(l);
+	}
+	
+}

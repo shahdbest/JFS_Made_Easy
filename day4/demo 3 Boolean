@@ -1,0 +1,27 @@
+
+//Datatype 
+
+//primitive type - simple values 
+/* 8bits , 16bits , 32bits , 64bits
+ * byte , short , int ,long  -> 0
+ * float , double -> 0.0
+ * char ->  /u0000
+ * boolean -> false
+ * */
+
+
+//class type : objects  -> null by def
+
+public class Demo1 {
+	
+	static boolean z;
+	static Boolean y;
+
+	public static void main(String[] args) {	
+
+		System.out.println(z);		
+		System.out.println(y);		
+		
+	}
+	
+}

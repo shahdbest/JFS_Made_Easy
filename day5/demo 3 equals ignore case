@@ -1,0 +1,25 @@
+
+
+public class Demo1 {
+	
+	public static void main(String[] args) {	
+
+		
+		
+		
+		String a1=new String("java");
+		String b1=new String("JAVA");
+
+		boolean result4= a1.equals(b1);
+		System.out.println(result4);
+
+		
+		
+		boolean result5= a1.equalsIgnoreCase(b1);
+		System.out.println(result5);
+
+		
+	}
+	
+	
+}

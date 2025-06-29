@@ -1,0 +1,26 @@
+
+
+public class Demo1 {
+	
+	public static void main(String[] args) {	
+//		String str="hello ";
+//		str.concat("world");
+//		System.out.println(str);
+
+		
+		
+
+		String str="hello ";
+		str=str.concat("world");
+		System.out.println(str);
+
+		
+		String s1="Hello";
+		s1=s1.toUpperCase();
+		System.out.println(s1);
+		
+	
+	}
+	
+	
+}

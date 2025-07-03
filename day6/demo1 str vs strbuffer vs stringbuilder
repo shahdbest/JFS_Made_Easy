@@ -1,0 +1,25 @@
+
+//StringBuffer vs StringBuilder
+
+public class Demo1 {
+	
+	public static void main(String[] args) {	
+
+		
+		String str=new String("hello");
+		str.concat("world");
+		System.out.println(str);
+		
+		
+		StringBuffer strB=new StringBuffer("hello");
+		strB.append("world");
+		System.out.println(strB);
+		
+		StringBuilder strBld=new StringBuilder("hello");
+		strBld.append("world");
+		System.out.println(strBld);
+		
+	}
+	
+	
+}

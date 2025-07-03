@@ -1,0 +1,29 @@
+
+
+//StringBuffer vs StringBuilder
+
+//String buffer is thread safe
+//String Builder is thread unsafe
+
+public class Demo1 {
+	
+	public static void main(String[] args) {	
+
+		
+				
+		StringBuffer strB=new StringBuffer("hello");
+		strB.append("world");
+		System.out.println(strB);
+		
+		StringBuilder strBld=new StringBuilder("hello");
+		strBld.append("world");
+		System.out.println(strBld);
+	
+		
+		System.out.println(strB.charAt(1));
+		System.out.println(strBld.charAt(1));
+		
+	}
+	
+	
+}

@@ -1,0 +1,35 @@
+
+//if-else -- switch 
+
+
+public class Demo1 {
+	
+	public static void main(String[] args) {	
+
+		char ch ='O'; // try read the char from scanner
+	
+//		if(ch=='A' ||ch=='E' ||ch=='I' ||ch=='O' ||ch=='U' )
+//			System.out.println("its a vowel");
+//		
+//		else
+//			System.out.println("not a vowel");
+		
+		
+		if(ch=='A')
+			System.out.println("its a vowel "+ch);
+		else if(ch=='E')
+			System.out.println("its a vowel "+ch);
+		else if(ch=='I')
+			System.out.println("its a vowel "+ch);
+		else if(ch=='O')
+			System.out.println("its a vowel "+ch);
+		else if(ch=='U')
+			System.out.println("its a vowel "+ch);
+		else
+			System.out.println("not a vowel");
+		
+		
+	}
+		
+	
+}

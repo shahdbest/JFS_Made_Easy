@@ -1,0 +1,19 @@
+
+//if-else -- switch 
+
+import java.util.Scanner;
+
+public class Demo1 {
+	
+	public static void main(String[] args) {	
+
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("eneter 2 number to add");
+		int n1= sc.nextInt();
+		int n2=sc.nextInt();
+		System.out.println(n1+n2);
+	}
+	
+	
+}

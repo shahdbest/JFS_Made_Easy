@@ -1,0 +1,35 @@
+
+//if-else -- switch 
+
+
+public class Demo1 {
+	
+	public static void main(String[] args) {	
+
+		char ch ='A'; // try read the char from scanner
+		//switch works with integeral constants 
+		//cases cannot be duplicated
+
+		int x=ch;
+		System.out.println(x);
+		
+		switch(ch)
+		{
+		
+		case 'A':System.out.println("vowel A"); 
+		break;
+		case 'E':System.out.println("vowel E"); 
+		break;
+		case 'I':System.out.println("vowel I"); 
+		break;
+		case 'O':System.out.println("vowel O"); 
+		break;
+		case 'U':System.out.println("vowel U"); 
+		
+		default:System.out.println("not a vowel "+ch); 
+		}
+		
+	}
+		
+	
+}

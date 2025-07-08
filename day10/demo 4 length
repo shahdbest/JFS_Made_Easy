@@ -1,0 +1,27 @@
+
+//collection of elements of same type 
+
+public class Demo1 {
+
+//	int marks1;
+	//int marks2;
+	//int marks3;
+//	int marks4;
+	//int marks5;
+	
+	int[] marks=new int[5];
+	
+	void disp()
+	{
+		
+		System.out.println(marks.length);
+	}
+	
+	public static void main(String[] args) {	
+
+		new Demo1().disp();
+		
+		//Demo1 d1=new Demo1();
+		//d1.disp();
+	}
+}

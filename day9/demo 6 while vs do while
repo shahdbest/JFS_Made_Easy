@@ -1,0 +1,24 @@
+
+//if-else -- switch 
+//loops 
+// fixed - programmer knows the number of iterations -> for
+//- variable -> programmer does not knows the number of iterations -> while or do while
+
+public class Demo1 {
+	
+	public static void main(String[] args) {	
+
+//		while(false)
+//		{
+//			System.out.println("looping");
+//		}
+//		
+		
+		do {
+			System.out.println("looping");
+		}
+		
+		while(false);
+		
+	}
+}

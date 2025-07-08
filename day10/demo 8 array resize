@@ -1,0 +1,30 @@
+
+//collection of elements of same type 
+
+public class Demo1 {
+
+//arrays cannot be resized
+	
+	int[] marks= new int[]{3,6,8,7,9};
+	
+	
+	
+	void disp()
+	{
+	
+		System.out.println("old length "+marks.length);
+		
+		marks=new int[7];
+		System.out.println("new length "+marks.length);
+		
+	}
+	
+	
+	public static void main(String[] args) {	
+
+		new Demo1().disp();
+		
+		//Demo1 d1=new Demo1();
+		//d1.disp();
+	}
+}

@@ -1,0 +1,28 @@
+
+//collection of elements of same type 
+
+public class Demo1 {
+
+//	int marks1;
+	//int marks2;
+	//int marks3;
+//	int marks4;
+	//int marks5;
+	
+	int[] marks=new int[5];
+	
+	void disp()
+	{
+		System.out.println(marks[0]);
+		System.out.println(marks[2]);
+		//System.out.println(marks[5]); array index out of bounds
+	}
+	
+	public static void main(String[] args) {	
+
+		new Demo1().disp();
+		
+		//Demo1 d1=new Demo1();
+		//d1.disp();
+	}
+}

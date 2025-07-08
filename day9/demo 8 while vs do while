@@ -1,0 +1,42 @@
+
+//if-else -- switch 
+//loops 
+// fixed - programmer knows the number of iterations -> for
+//- variable -> programmer does not knows the number of iterations -> while or do while
+
+import java.util.Scanner;
+
+public class Demo1 {
+	
+	public static void main(String[] args) {	
+
+		Scanner sc=new Scanner(System.in); 
+
+		int pin;
+		
+		//1111
+		
+		/*
+		   //pin=-1; try without giving -1 
+		while(pin!=1111) 
+		{
+			System.out.println("enter pin");
+			pin=sc.nextInt();
+		}
+		
+		System.out.println("valid user");
+		
+		
+		*/
+		
+		
+		do
+		{
+			System.out.println("enter pin");
+			pin=sc.nextInt();
+		}
+		while(pin!=1111);
+		System.out.println("valid user");
+		
+	}
+}

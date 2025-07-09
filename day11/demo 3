@@ -1,0 +1,52 @@
+import javax.swing.JOptionPane;
+
+public class Demo1 {
+
+	
+	
+	public static void main(String[] args) {	
+
+
+		Calculator calculator=new Calculator();
+		int sum=calculator.add(12,20);
+		System.out.println(sum);
+		System.out.println(sum/2);
+		JOptionPane.showMessageDialog(null,sum);
+		
+		calculator.add(15,20);
+		
+		String x="hello";
+		
+		String res=x.replace('l', 'k');
+		System.out.println(res);
+		
+	}
+}
+
+
+-----------------------
+
+
+  
+// access specifer , 
+//access modifier , 
+//return type , 
+//identifier , 
+//arg list 
+//body
+
+//public static void main(String args[]){}
+
+public class Calculator {
+
+	
+	int add(int a,int b)
+	{
+		
+		return a + b;
+	}
+	
+	
+	
+}
+

@@ -1,0 +1,61 @@
+package packone;
+
+public class C1 {
+
+}
+
+----------------------------------------
+
+  package packone;
+
+public class C2 {
+
+}
+
+
+-------------------------------
+
+  package packone;
+
+public class C3 extends C1{
+
+}
+
+
+-----------------------------------------------packtwo
+
+
+  package packtwo;
+
+public class C4 {
+
+}
+
+
+------------------------------
+
+
+  package packtwo;
+
+
+import packone.C1;
+
+
+public class C5 extends C1{
+
+}
+
+
+-------------------testing
+
+  package testing;
+
+public class MyMainClass {
+
+}
+
+
+
+
+
+

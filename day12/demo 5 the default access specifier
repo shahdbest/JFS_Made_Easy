@@ -1,0 +1,55 @@
+package packone;
+
+//public : visible to everyone
+//private visible within the class where its declared 
+//default
+
+public class C1 {
+
+	
+	 int x=10;
+	
+	public void disp()
+	{
+		System.out.println("c1 class disp method");
+		System.out.println(x);
+	}
+	
+}
+
+--------------------------------------c2 in same package 
+
+
+  package packone;
+
+public class C2 {
+
+	
+	public static void main(String[] args) {
+		
+		C1 c1=new C1();
+		c1.disp();
+		System.out.println(c1.x);//visible coz x is default now and c2 and c1 are in same package
+	}
+}
+
+----------------------------c4 in some other package
+
+
+  package packtwo;
+
+import packone.C1;
+
+public class C4 {
+
+	
+public static void main(String[] args) {
+		
+		C1 c1=new C1();
+		c1.disp();
+		System.out.println(c1.x);//error x is default cannot access it here coz c4 is not the same package member
+	}
+}
+
+
+

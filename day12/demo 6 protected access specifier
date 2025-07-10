@@ -1,0 +1,76 @@
+package packone;
+
+//public : visible to everyone
+//private visible within the class where its declared 
+//default
+
+public class C1 {
+
+	
+	 protected int x=10;
+	
+	public void disp()
+	{
+		System.out.println("c1 class disp method");
+		System.out.println(x);
+	}
+	
+}
+
+----------------------------------------c2 same package member not a child
+
+
+  package packone;
+
+public class C2 {
+
+	
+	public static void main(String[] args) {
+		
+		C1 c1=new C1();
+		c1.disp();
+		System.out.println(c1.x);//visible coz x is default now and c2 and c1 are in same package
+	}
+}
+
+------------------------------------------------------- c4 not the not the package memeber either
+
+  package packtwo;
+
+import packone.C1;
+
+public class C4 {
+
+	
+public static void main(String[] args) {
+		
+		C1 c1=new C1();
+		c1.disp();
+		System.out.println(c1.x);//error x is protected cannot access it here coz c4 is not the same package member and not even the child
+	}
+}
+
+
+------------------------------------c5 not the package member but a child 
+
+
+package packtwo;
+
+
+import packone.C1;
+
+
+public class C5 extends C1{
+
+	
+public static void main(String[] args) {
+		
+		C5 c5=new C5();
+		c5.disp();
+		System.out.println(c5.x);//protected can be accessed coz c5 is the child of c1
+	}
+}
+
+
+
+  

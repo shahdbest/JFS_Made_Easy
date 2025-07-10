@@ -1,0 +1,268 @@
+
+* ✅ **Question**
+* 📘 **Description**
+* 💡 **Hints & Guidelines for Freshers**
+* 📄 **Pseudocode**
+
+This format is beginner-friendly and will help students **develop problem-solving skills** step-by-step.
+
+---
+
+## ✅ Java Array Coding Questions for Freshers
+
+*(With Hints, Descriptions & Pseudocode)*
+
+---
+
+### 1. **Find the Largest Element in an Array**
+
+📘 **Description:**
+Return the largest number in the array.
+
+💡 **Hint for Freshers:**
+Start by assuming the first element is the biggest. Then compare each remaining element with it. If you find a bigger one, update it.
+
+📄 **Pseudocode:**
+
+```
+Initialize max with first element
+Loop through array
+    If current element > max
+        Update max
+Return max
+```
+
+---
+
+### 2. **Find the Second Largest Element**
+
+📘 **Description:**
+Return the second highest number, avoiding duplicates of the largest.
+
+💡 **Hint:**
+Keep track of two values: the highest and the second highest. Update both as you go.
+
+📄 **Pseudocode:**
+
+```
+Initialize first and second to minimum
+Loop through array
+    If current > first
+        second = first
+        first = current
+    Else if current > second and current != first
+        second = current
+Return second
+```
+
+---
+
+### 3. **Reverse an Array**
+
+📘 **Description:**
+Print the array in reverse order.
+
+💡 **Hint:**
+Use two pointers – one at the start and one at the end. Swap values and move them toward each other.
+
+📄 **Pseudocode:**
+
+```
+start = 0, end = array.length - 1
+While start < end
+    Swap array[start] and array[end]
+    start++, end--
+```
+
+---
+
+### 4. **Check if Array is Sorted**
+
+📘 **Description:**
+Check whether the array is in ascending order.
+
+💡 **Hint:**
+Compare every element with the previous one. If any element is smaller, it’s not sorted.
+
+📄 **Pseudocode:**
+
+```
+Loop from i = 1 to array.length - 1
+    If array[i] < array[i - 1]
+        Return false
+Return true
+```
+
+---
+
+### 5. **Find the Missing Number from 1 to n**
+
+📘 **Description:**
+Given numbers from 1 to n with one missing, find the missing number.
+
+💡 **Hint:**
+Calculate the total sum using a formula. Subtract the actual sum of array elements.
+
+📄 **Pseudocode:**
+
+```
+expectedSum = n * (n + 1) / 2
+actualSum = 0
+Loop through array
+    actualSum += element
+Return expectedSum - actualSum
+```
+
+---
+
+### 6. **Move All Zeros to the End**
+
+📘 **Description:**
+Move all zeros in the array to the end without changing the order of non-zero numbers.
+
+💡 **Hint:**
+Use an index to track where the next non-zero number should go. At the end, fill remaining places with 0.
+
+📄 **Pseudocode:**
+
+```
+index = 0
+Loop through array
+    If element != 0
+        array[index] = element
+        index++
+Fill remaining elements from index to end with 0
+```
+
+---
+
+### 7. **Find Duplicates in an Array**
+
+📘 **Description:**
+Print all elements that appear more than once.
+
+💡 **Hint:**
+Use a Set or Map to track already seen values.
+
+📄 **Pseudocode:**
+
+```
+Create empty set
+Loop through array
+    If element in set
+        Print or store as duplicate
+    Else
+        Add element to set
+```
+
+---
+
+### 8. **Rotate Array to the Right by k Steps**
+
+📘 **Description:**
+Rotate the array to the right by `k` steps.
+
+💡 **Hint:**
+Reverse the whole array, then reverse parts to fix the order.
+
+📄 **Pseudocode:**
+
+```
+Reverse whole array
+Reverse first k elements
+Reverse remaining n-k elements
+```
+
+---
+
+### 9. **Find Frequency of Each Element**
+
+📘 **Description:**
+Count how many times each number occurs.
+
+💡 **Hint:**
+Use a HashMap. If the number is already in map, increase its count.
+
+📄 **Pseudocode:**
+
+```
+Create empty map
+Loop through array
+    If element in map
+        Increase count
+    Else
+        Add element with count 1
+```
+
+---
+
+### 10. **Find Subarray with Maximum Sum (Kadane's Algorithm)**
+
+📘 **Description:**
+Find a subarray (contiguous elements) with the largest sum.
+
+💡 **Hint:**
+Use currentSum to track running sum, reset it if it becomes negative.
+
+📄 **Pseudocode:**
+
+```
+maxSum = currentSum = first element
+Loop from 1 to end
+    currentSum = max(current element, currentSum + element)
+    maxSum = max(maxSum, currentSum)
+Return maxSum
+```
+
+---
+
+### 11. **Check if Two Arrays Are Equal**
+
+📘 **Description:**
+Return true if both arrays have the same elements (in any order).
+
+💡 **Hint:**
+Sort both arrays, then compare elements one-by-one.
+
+📄 **Pseudocode:**
+
+```
+If lengths are not equal
+    Return false
+Sort both arrays
+Loop and compare each element
+    If any mismatch
+        Return false
+Return true
+```
+
+---
+
+### 12. **Find Common Elements in Two Arrays**
+
+📘 **Description:**
+Return elements that are present in both arrays.
+
+💡 **Hint:**
+Store elements of one array in a Set. Loop through the other and check membership.
+
+📄 **Pseudocode:**
+
+```
+Create set from first array
+Loop through second array
+    If element in set
+        Add to result
+```
+
+---
+
+## 🎯 Final Tips for Students:
+
+* **Don't copy code.** Understand the logic and try writing your own version.
+* **Dry run** with small arrays to visualize logic.
+* Break big problems into smaller steps.
+* Try **writing test cases** for each problem.
+* Use a **whiteboard or paper** before jumping into code.
+
+---

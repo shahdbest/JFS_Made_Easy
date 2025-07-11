@@ -1,0 +1,31 @@
+
+public class DemoJava {
+	int age;
+	String name;
+	
+	public DemoJava() {
+		System.out.println("const");
+		age=19;
+		name="virat";
+	}
+	
+	public DemoJava(int age,String name) {
+		System.out.println("const");
+		this.age=age;
+		this.name=name;
+	}
+	
+
+	
+	void disp(){
+		System.out.println(age);
+		System.out.println(name);
+	}
+	
+	public static void main(String[] args) {
+
+		new DemoJava().disp();
+		new DemoJava(45,"Rohit").disp();		
+	}
+
+}

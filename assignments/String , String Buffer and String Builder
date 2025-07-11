@@ -1,0 +1,219 @@
+Absolutely! Here's the **finalized list of 12 String-based coding questions**, suitable for freshers, focusing on the **`String` class** and a couple of tasks using **`StringBuffer` / `StringBuilder`** — with **clear pseudocode** and **no collections used**.
+
+---
+
+## ✅ **Java String Class Coding Questions (With Pseudocode)**
+
+**Level:** Freshers | **Focus:** No collections, only basic logic
+
+---
+
+### 🔤 **String Class Questions**
+
+---
+
+### **1. Reverse a String**
+
+📘 *Description:* Reverse the characters in the string.
+
+📄 *Pseudocode:*
+
+```
+Initialize result = ""
+Loop from end of string to start
+    Append each character to result
+Print result
+```
+
+---
+
+### **2. Check if a String is a Palindrome**
+
+📘 *Description:* A string is a palindrome if it reads the same backward as forward.
+
+📄 *Pseudocode:*
+
+```
+Initialize reversed = reverse of string
+If string equals reversed
+    Print "Palindrome"
+Else
+    Print "Not Palindrome"
+```
+
+---
+
+### **3. Count the Number of Vowels**
+
+📘 *Description:* Count how many vowels (a, e, i, o, u) exist in the string.
+
+📄 *Pseudocode:*
+
+```
+Initialize count = 0
+Loop through each character
+    If character is a, e, i, o, u (case-insensitive)
+        Increment count
+Print count
+```
+
+---
+
+### **4. Remove All Spaces**
+
+📘 *Description:* Remove every space character from the string.
+
+📄 *Pseudocode:*
+
+```
+Initialize result = ""
+Loop through each character
+    If character is not a space
+        Append to result
+Print result
+```
+
+---
+
+### **5. Convert Lowercase to Uppercase (without using toUpperCase)**
+
+📘 *Description:* Convert all lowercase letters to uppercase.
+
+📄 *Pseudocode:*
+
+```
+Initialize result = ""
+Loop through each character
+    If character is between 'a' and 'z'
+        Convert to uppercase using ASCII logic
+    Append to result
+Print result
+```
+
+---
+
+### **6. Find the Length of a String Without Using .length()**
+
+📘 *Description:* Use a loop to count the number of characters.
+
+📄 *Pseudocode:*
+
+```
+Initialize count = 0
+For each character in string
+    Increment count
+Print count
+```
+
+---
+
+### **7. Replace All Occurrences of a Character**
+
+📘 *Description:* Replace every occurrence of a given character.
+
+📄 *Pseudocode:*
+
+```
+Initialize result = ""
+Loop through each character
+    If character == oldChar
+        Append newChar
+    Else
+        Append character
+Print result
+```
+
+---
+
+### **8. Replace First Occurrence of a Character**
+
+📘 *Description:* Replace only the first time a character appears.
+
+📄 *Pseudocode:*
+
+```
+Initialize result = ""
+Initialize flag = false
+Loop through each character
+    If character == oldChar and flag is false
+        Append newChar
+        Set flag = true
+    Else
+        Append character
+Print result
+```
+
+---
+
+### **9. Replace Last Occurrence of a Character**
+
+📘 *Description:* Replace only the last time a character appears.
+
+📄 *Pseudocode:*
+
+```
+Find lastIndex of oldChar in string
+Loop through each index
+    If index == lastIndex
+        Append newChar
+    Else
+        Append current character
+Print result
+```
+
+---
+
+### **10. Compare Two Strings Without Using .equals()**
+
+📘 *Description:* Character-by-character comparison of two strings.
+
+📄 *Pseudocode:*
+
+```
+If lengths are not equal
+    Print "Not equal"
+Else
+    Loop through characters
+        If any character differs
+            Print "Not equal"
+            Exit
+    Print "Equal"
+```
+
+---
+
+### 🧵 **StringBuffer / StringBuilder Questions**
+
+---
+
+### **11. Reverse a String Using `StringBuffer`**
+
+📘 *Description:* Use the built-in `.reverse()` method.
+
+📄 *Pseudocode:*
+
+```
+Create StringBuffer with input string
+Call .reverse()
+Print result
+```
+
+---
+
+### **12. Append Strings Using `StringBuilder`**
+
+📘 *Description:* Efficient string concatenation using `.append()`.
+
+📄 *Pseudocode:*
+
+```
+Create StringBuilder sb
+sb.append("Hello")
+sb.append(" ")
+sb.append("World")
+Print sb.toString()
+```
+
+---
+
+Would you like this organized in a **handout-style PDF** or shared in **Google Docs format** for your students?

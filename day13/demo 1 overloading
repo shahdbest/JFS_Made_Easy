@@ -1,0 +1,34 @@
+
+public class DemoJava {
+	int age;
+	String name;
+	
+	void init(){
+		age=19;
+		name="virat";
+	}
+	
+	void init(int ageVar,String nameVar){
+		age=ageVar;
+		name=nameVar;
+	}
+	
+	
+	void disp(){
+		System.out.println(age);
+		System.out.println(name);
+	}
+	
+	public static void main(String[] args) {
+
+		DemoJava d=new DemoJava();
+		d.init();
+		d.disp();
+		
+		d.init(45, "Rohit");
+		d.disp();
+		
+		
+	}
+
+}

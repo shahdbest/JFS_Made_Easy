@@ -1,0 +1,24 @@
+
+public class DemoJava {
+	int age;
+	String name;
+	
+	public DemoJava() {
+		System.out.println("const");
+		age=19;
+		name="virat";
+	}
+	
+	
+	void disp(){
+		System.out.println(age);
+		System.out.println(name);
+	}
+	
+	public static void main(String[] args) {
+
+		new DemoJava();
+		new DemoJava().disp();		
+	}
+
+}

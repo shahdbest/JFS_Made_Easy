@@ -1,0 +1,20 @@
+
+// overloading -> if functions perform closely related task we give it the same name 
+// ensure number , type or sequence of args is different
+//return type can be same or different
+
+public class DemoJava {
+
+	void add(int a , int b)
+	{
+		System.out.println("float , float");
+	}
+		
+	
+	public static void main(String[] args) {
+
+		new DemoJava().add('A','B');
+		
+		}
+
+}

@@ -1,0 +1,36 @@
+
+public class DemoJava {
+	int age=100; //instance var
+	String name;
+
+	
+	
+	void abc()
+	{
+		int age=50; //local var
+		System.out.println("just age "+age);
+		System.out.println("this.age "+this.age);
+			//same as 
+		//System.out.println("instance var "+d.age); error coz d is local to main
+
+	}
+	
+	void disp()
+	{
+		System.out.println(age);
+	}
+	
+	
+	
+	public static void main(String[] args) {
+
+		DemoJava d=new DemoJava();
+		System.out.println("instance var "+d.age);
+		//System.out.println("instance var "+this.age);
+	// cannot use this keyword in static blocks
+		d.abc();
+		d.disp();
+
+	}
+
+}

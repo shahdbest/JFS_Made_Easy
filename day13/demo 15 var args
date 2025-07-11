@@ -1,0 +1,28 @@
+
+// overloading -> if functions perform closely related task we give it the same name 
+// ensure number , type or sequence of args is different
+//return type can be same or different
+
+// varargs -. must be the last arg in an arg list
+
+public class DemoJava {
+	
+	int add(String b,int... a )
+	{
+		
+		System.out.println(a[0]);
+		System.out.println("add method");
+		return 0;
+	}
+
+	
+	public static void main(String[] args) {
+		
+		DemoJava d=new DemoJava();
+		d.add("10",88);
+		d.add("33",20);
+		d.add("50",20,30);
+		
+	}
+
+}

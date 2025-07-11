@@ -1,0 +1,30 @@
+
+public class DemoJava {
+	int age=100; //instance var
+	String name;
+
+	
+	
+	void abc()
+	{
+		int age=50; //local var
+		System.out.println(age);
+		
+	}
+	
+	void disp()
+	{
+		System.out.println(age);
+	}
+	
+	
+	
+	public static void main(String[] args) {
+
+		DemoJava d=new DemoJava();
+		d.abc();
+		d.disp();
+
+	}
+
+}

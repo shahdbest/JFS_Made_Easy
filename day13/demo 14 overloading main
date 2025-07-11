@@ -1,0 +1,30 @@
+
+// overloading -> if functions perform closely related task we give it the same name 
+// ensure number , type or sequence of args is different
+//return type can be same or different
+
+public class DemoJava {
+	
+	public static void main(String[] args) {
+
+		System.out.println("entry point main");
+		
+		main();
+		main("testing");
+		}
+
+	public static void main() {
+
+		System.out.println("simple main");
+		
+	}
+
+
+	public static void main(String a) {
+
+		System.out.println("simple main str");
+		
+	}
+
+
+}

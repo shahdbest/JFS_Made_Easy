@@ -1,0 +1,54 @@
+
+
+class ATM{
+
+	private int pin=1111;
+	private int balance=100;
+	
+	boolean validatePin(int pin){
+		if(this.pin==pin)
+		return true;
+		
+		return false;
+	}
+	
+		
+	public int getBalance() {
+		return balance;
+	}
+
+
+	void withdraw(int amount)
+	{
+		if(amount<=balance)
+			balance-=amount; // balance = balance-amount
+	}
+	
+}
+
+
+public class DemoJava {
+
+	public static void main(String[] args) {
+	
+			ATM atm=new ATM();
+		int enterPin=1111;
+		int amount= 50;	
+	//	atm.balance=5000; possible if ur property is not private
+		
+		if(atm.validatePin(enterPin)) {
+			System.out.println(atm.getBalance());
+			atm.withdraw(50);
+			System.out.println("after withdrawl");
+			System.out.println(atm.getBalance());
+		}
+		else
+		{
+			System.out.println("wrong pin");
+		}
+		
+		
+	}	
+
+}
+// problem once age is set it cannot be changed 

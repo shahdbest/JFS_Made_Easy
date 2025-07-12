@@ -1,0 +1,32 @@
+
+class Employee
+{
+
+	private String emplayeeName;
+	private int age;
+		
+	public Employee(String emplayeeName, int age) {
+		if(age>0)
+			this.age = age;
+		
+		this.emplayeeName = emplayeeName;
+	
+	}
+
+	void disp(){
+		System.out.println(emplayeeName +" "+age);
+	}
+}
+
+
+public class DemoJava {
+
+	public static void main(String[] args) {
+			
+		Employee e=new Employee("Rohit",-45);
+		//e.age=-45; error cannot access age as it is private
+		e.disp();
+		
+	}	
+
+}

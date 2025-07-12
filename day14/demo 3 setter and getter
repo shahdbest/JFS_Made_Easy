@@ -1,0 +1,54 @@
+
+class Employee
+{
+
+	private String emplayeeName;
+	private int age;
+			
+	public String getEmplayeeName() {
+		return emplayeeName;
+	}
+
+	public void setEmplayeeName(String emplayeeName) {
+		this.emplayeeName = emplayeeName;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		if(age>0)
+			this.age = age;
+	}
+
+	public Employee(String emplayeeName, int age) {
+		if(age>0)
+			this.age = age;
+		
+		this.emplayeeName = emplayeeName;
+	
+	}
+
+	void disp(){
+		System.out.println(emplayeeName +" "+age);
+	}
+}
+
+
+public class DemoJava {
+
+	public static void main(String[] args) {
+			
+		Employee e=new Employee("Rohit",-45);
+		//e.age=-45; error cannot access age as it is private
+		e.disp();
+		
+		e.setAge(20);
+		e.disp();
+
+		System.out.println(e.getAge());
+	}	
+
+}
+// problem once age is set it cannot be changed 

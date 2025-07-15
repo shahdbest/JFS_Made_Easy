@@ -1,0 +1,83 @@
+
+public class Calc {
+
+	
+	public Calc() {
+		
+		this(21);
+		System.out.println("def const");
+	}
+	
+	public Calc(int x) {
+	
+		System.out.println("constructor of clac class with 1 arg");
+	}
+	
+	protected  void add() {
+		System.out.println("add");
+		
+	}
+	
+	void sub() {
+		System.out.println("sub");
+	}
+	
+	void multiply() {
+		System.out.println("multilply");
+	}
+	
+	void divide() {
+		System.out.println("divide");
+	}
+	
+	
+	
+}
+
+------------------------
+
+
+// java doesnt support multiple inheritance with classes-> a class cannot have more than one parent 
+// child class inherits everything from parent except private and constructor 
+
+//rules for overriding
+// type seq and num of args must be the same
+// return type must be same or child of the return type if the return type is class type
+// Number is the parent of Integer in java
+
+
+public class SciCalc extends Calc {
+
+
+	
+	SciCalc()
+	{
+		//super();
+		//super(10);
+		System.out.println("constructor child sciCalc");
+		
+	}
+
+	// modifying the behavior of parent 
+
+	@Override
+public void add()  
+	{
+		System.out.println("new add method");
+	
+	}
+	
+	void sin() {
+		System.out.println("sin");
+	}
+	
+	void cos() {
+		System.out.println("cos");
+	}
+	
+}
+
+
+-------------------------------
+
+  

@@ -1,0 +1,59 @@
+
+public class Calc {
+
+	
+	void add() {
+		System.out.println("add");
+	}
+	
+	void sub() {
+		System.out.println("sub");
+	}
+	
+	void multiply() {
+		System.out.println("multilply");
+	}
+	
+	void divide() {
+		System.out.println("divide");
+	}
+	
+	
+	
+}
+
+
+-------------------------------------------
+
+
+  
+public class SciCalc extends Calc{
+
+	void sin() {
+		System.out.println("sin");
+	}
+	
+	void cos() {
+		System.out.println("cos");
+	}
+	
+}
+
+
+------------------------------------
+
+
+  
+public class CalcService {
+
+	public static void main(String[] args) {
+
+			Calc c=new Calc();
+			c.add();
+			
+			SciCalc sc=new SciCalc();
+			sc.sin();
+			sc.add();
+	}
+
+}

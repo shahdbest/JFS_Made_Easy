@@ -1,0 +1,28 @@
+// final variable dont have a default value 
+// must be initilized and once initilized its final
+public class Student {
+
+
+	final int rollNo;
+
+	Student()
+	{
+	rollNo=60;	
+
+	}
+	
+	
+	void showStudentData() {
+	
+
+		System.out.println(rollNo);
+	}
+	
+	public static void main(String[] args) {
+	
+		new Student().showStudentData();
+		
+		
+	}
+	
+}

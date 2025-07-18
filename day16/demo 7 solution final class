@@ -1,0 +1,36 @@
+
+// when u have critical logic in ur application and u dont want someone to break that logic makes sure u mark u class as final .. marking the class as final ensures the calss can be used but cannot be modified
+
+public final class Calculator {
+
+ int add(int a,int b){
+	 return a+b;
+	 
+	 
+ }
+
+ int sub(int a,int b){
+	 return a-b;
+	 
+	 
+ }
+
+}
+
+
+
+
+----------
+
+//ERROR CANNOT SUBCLASS A FINAL CLASS  
+public class HackedCalculator extends Calculator{
+
+
+	@Override
+	int add(int a, int b) {
+		return 0;
+	}
+}
+
+
+

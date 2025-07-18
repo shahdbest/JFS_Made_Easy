@@ -1,0 +1,22 @@
+
+public class Student {
+
+	String name="abc"; 
+	final int rollNo=50;
+	
+	void showStudentData() {
+	
+		name="xyz";
+		//rollNo=60; error final var once initilized cannot be changed 
+		
+		System.out.println(name);
+	}
+	
+	public static void main(String[] args) {
+	
+		new Student().showStudentData();
+		
+		
+	}
+	
+}

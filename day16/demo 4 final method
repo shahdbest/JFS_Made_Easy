@@ -1,0 +1,65 @@
+// final variable dont have a default value 
+// must be initilized and once initilized its final
+class Student {
+
+
+	final void followDiscipline(){
+		System.out.println("has to wear school uniform");
+	}
+	
+	
+	void addendForLab()
+	{
+		System.out.println("students must addted the lab");
+	}
+	
+	
+}
+
+class ScienceStudent extends Student{
+	
+//	@Override
+//	void followDiscipline(){
+//		System.out.println("we will come in casuals");
+//	}
+//	
+	
+	
+}
+
+class ArtsStudent extends Student{
+	
+	
+	@Override
+	void addendForLab()
+	{
+		System.out.println("lab is not for us");
+	}
+	
+	
+}
+
+
+public class StudentService
+{
+
+	public static void main(String[] args) {
+		
+		ScienceStudent scienceStudents=new ScienceStudent();
+		ArtsStudent artsStudents=new ArtsStudent();
+
+		
+		scienceStudents.followDiscipline();
+		scienceStudents.addendForLab();
+		
+		
+		artsStudents.followDiscipline();
+		artsStudents.addendForLab();
+		
+		
+		
+	}
+	
+	
+	
+}

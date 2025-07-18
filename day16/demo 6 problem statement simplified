@@ -1,0 +1,65 @@
+
+
+
+
+public class Calculator {
+
+ int add(int a,int b){
+	 return a+b;
+	 
+	 
+ }
+
+ int sub(int a,int b){
+	 return a-b;
+	 
+	 
+ }
+
+}
+
+
+
+
+--------------------------
+
+  
+public class HackedCalculator extends Calculator{
+
+
+	@Override
+	int add(int a, int b) {
+		return 0;
+	}
+}
+
+
+-----------------------------------------------
+
+  
+public class CalcService {
+
+	
+	
+	
+	public static void main(String[] args) {
+
+	
+		
+		Calculator c=new Calculator();
+		System.out.println(c.add(20,30));
+
+		
+		HackedCalculator c1=new HackedCalculator();
+		
+		int result= c1.add(50, 50);
+		
+		System.out.println(result);
+	//-------------------------------------
+		
+	}
+
+}
+
+
+

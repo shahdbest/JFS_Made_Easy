@@ -1,0 +1,86 @@
+🧬 Java Inheritance Coding Questions
+For Freshers | Focus: Understanding the “why” behind inheritance
+
+✅ 1. Create a Basic Inheritance Example
+📘 Description:
+Create a class named Person that has two fields: name and age.
+Now create another class called Student that extends Person and adds rollNumber and course.
+
+➡️ The program should allow you to:
+
+Create a student object
+
+Set and display all details (name, age, roll number, course)
+
+🎯 Goal:
+Learn how a subclass can inherit variables and methods from a parent class and add more specific features.
+
+✅ 2. Constructor Chaining Using super()
+📘 Description:
+Create a class Vehicle that has a constructor which takes brand and year as parameters.
+Now create a class Car that extends Vehicle and adds modelName.
+
+➡️ In the Car constructor, use super() to call the Vehicle constructor.
+
+🎯 Goal:
+Understand how constructor chaining works and how the child class can call and reuse the constructor of the parent class.
+
+✅ 3. Method Overriding in Inheritance
+📘 Description:
+Create a parent class Animal that has a method makeSound() which prints "Some sound...".
+Now create subclasses Dog, Cat, and Cow that each override makeSound() with "Bark", "Meow", and "Moo" respectively.
+
+➡️ Write a main method that calls makeSound() using different subclass objects.
+
+🎯 Goal:
+Practice method overriding and understand how a child class can change the behavior of a parent class method.
+
+✅ 4. Access Parent Class Method Using super
+📘 Description:
+In the Animal class, define a method describe() that prints "This is an animal."
+In the Dog class, override describe() to print "This is a dog." but still call the parent method using super.describe().
+
+➡️ Output should show both lines:
+
+"This is an animal."
+
+"This is a dog."
+
+🎯 Goal:
+Understand how to access overridden methods from the parent class using the super keyword.
+
+✅ 5. Multi-level Inheritance Example
+📘 Description:
+Create three classes:
+
+Person → has name and age
+
+Employee extends Person → adds employeeId and designation
+
+Manager extends Employee → adds department and teamSize
+
+➡️ Create an object of Manager and print all details.
+
+🎯 Goal:
+Learn how multi-level inheritance works and how a child class gets all the properties of parent and grandparent classes.
+
+✅ 6. Call Parent Class Variable Shadowed in Subclass
+📘 Description:
+Create a class A with a variable int x = 10;
+Create class B that extends A and also defines int x = 20;
+
+➡️ In B, write a method to print both the child’s x and parent’s x using super.x.
+
+🎯 Goal:
+Understand how variable shadowing works and how to access parent’s variable when both parent and child define the same name.
+
+✅ 7. Final Method in Parent Class
+📘 Description:
+Create a class BankAccount with a final method calculateInterest().
+Now create a subclass SavingsAccount and try to override calculateInterest().
+
+➡️ You should get a compile-time error.
+
+🎯 Goal:
+Understand how the final keyword prevents method overriding and protects behavior from being changed in subclasses.
+

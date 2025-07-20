@@ -1,0 +1,136 @@
+
+public abstract class Animal {
+
+	//common behavior
+	void eat()
+	{
+		System.out.println("animal is eating");
+	}
+	
+	
+	// the behavior will differ for all the animals we create
+	abstract void sound();
+	
+	abstract void move();
+	
+	
+}
+
+
+------------------------------
+
+
+  
+public class Tiger extends Animal{
+
+	@Override
+	void sound() {
+
+		System.out.println("Tiger roars");
+	}
+
+	@Override
+	void move() {
+
+		System.out.println("Tiger runs fast in the jungle");
+		
+	}
+
+	
+	void hunt()
+	{
+		System.out.println("tiger is a hunter");
+	}
+	
+}
+
+
+----------------------------------------
+
+
+  
+public class Cat extends Animal{
+
+	@Override
+	void sound() {
+	System.out.println("cat meows");
+		
+	}
+
+	@Override
+	void move() {
+
+		System.out.println("Cat runs silently and jump around");
+		
+	}
+
+}
+
+
+------------------------------
+
+
+  
+public class AnimalMover {
+
+	
+	
+	void moveAnimal(Animal animal)
+	{
+		
+		animal.move();
+	}
+	
+	
+}
+
+
+-----------------------------------
+
+  
+public class Dog extends Animal{
+
+	@Override
+	void move() {
+		
+		System.out.println("dog runs happily ");
+		
+	}
+	
+	@Override
+	void sound() {
+		System.out.println("dog barks");
+		
+	}
+	
+}
+
+
+---------------------------------
+
+
+  
+public class AnimalService {
+
+	
+	
+	public static void main(String[] args) {
+		
+		
+		Animal animal=new Tiger();
+		//Animal animal=new Cat();
+		//Animal animal=new Dog();
+		
+		AnimalMover animalMover=new AnimalMover();
+		animalMover.moveAnimal(animal);
+		
+		//animal.hunt();//Error: u can only call super type methods (parents methods)
+		
+		Tiger t=new Tiger();
+		t.hunt();
+		
+		
+		
+	}
+	
+}

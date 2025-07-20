@@ -1,0 +1,86 @@
+
+//abstract method is a method without the body - can only be created inside a abstract class 
+// an abstract class can have zero or more abstract methods
+// u cannot create an instance of abstract class
+
+public abstract class MyPlan {
+	
+	void garden(){
+		System.out.println("garden");
+	}
+	
+	void sp(){
+		System.out.println("swim");
+	}
+	
+	
+	void rooms(){
+		System.out.println("3bhk");	
+	}
+	
+	
+	abstract void location();
+		
+}
+
+-------------------------------
+
+  
+public class JohnsPlan extends MyPlan {
+
+	@Override
+	void location() {
+	
+		System.out.println("sp at the top .. garden around the building");
+	}
+
+}
+
+
+--------------------
+
+  
+public class RocksPlan extends MyPlan{
+
+	@Override
+	void location() {
+		
+		System.out.println("sp inforont of the building.. a rooftop garden");
+	}
+
+}
+
+
+------------------------
+
+
+
+  
+public class PlanService {
+
+	
+	public static void main(String[] args) {
+		
+		JohnsPlan jp=new JohnsPlan();
+		
+		jp.rooms();
+		jp.garden();
+		jp.sp();
+
+		jp.location();
+	
+		
+		RocksPlan rc=new RocksPlan();
+		
+		rc.rooms();
+		rc.garden();
+		rc.sp();
+
+		rc.location();
+			
+	}
+	
+}
+
+
+

@@ -1,0 +1,18 @@
+
+public class AnimalService {
+
+	public static void main(String[] args) {
+		
+	Animal animal=new Tiger();
+		animal.eat();
+		animal.sound();
+
+		System.out.println(animal instanceof Tiger);
+		
+Animal animal1=new Cat();
+animal1.eat();
+animal1.sound();
+		
+	}
+	
+}

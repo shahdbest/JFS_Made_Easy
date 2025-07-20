@@ -1,0 +1,28 @@
+
+//abstract method is a method without the body - can only be created inside a abstract class 
+// an abstract class can have zero or more abstract methods
+// u cannot create an instance of abstract class
+// u cannot create an instance of abstract class
+// an abstract method cannot be final
+// an abstract method cannot be private
+
+
+public abstract class MyPlan {
+	
+	final void garden(){
+		System.out.println("garden");
+	}
+	
+	void sp(){
+		System.out.println("swim");
+	}
+	
+	
+	void rooms(){
+		System.out.println("3bhk");	
+	}
+	
+	
+	  abstract void location();
+		
+}

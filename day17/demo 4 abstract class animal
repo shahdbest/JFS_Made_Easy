@@ -1,0 +1,61 @@
+
+public abstract class Animal {
+
+	//common behavior
+	void eat()
+	{
+		System.out.println("animal is eating");
+	}
+	
+	
+	// the behavior will differ for all the animals we create
+	abstract void sound();
+	
+}
+
+
+--------------------
+  
+public class Tiger extends Animal{
+
+	@Override
+	void sound() {
+
+		System.out.println("Tiger roars");
+	}
+
+}
+
+
+-------------
+  
+public class Cat extends Animal{
+
+	@Override
+	void sound() {
+	System.out.println("cat meows");
+		
+	}
+}
+
+
+----------------------
+
+  
+public class AnimalService {
+
+	public static void main(String[] args) {
+		
+		Tiger tiger=new Tiger();
+		
+		tiger.eat();
+		tiger.sound();
+		
+		
+		Cat cat=new Cat();
+		cat.eat();
+		cat.sound();
+		
+	}
+	
+}

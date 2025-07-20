@@ -1,0 +1,143 @@
+
+public abstract class BankAccount {
+
+	
+	String accountNumber;
+	int balance;
+	
+	public BankAccount(String accountNumber, int balance) {
+		super();
+		this.accountNumber = accountNumber;
+		this.balance = balance;
+	}
+	
+	public BankAccount() {
+	
+	}
+	
+	
+	void deposit(int amount){
+		
+		balance+=amount;
+		System.out.println("deposited : "+amount + "in ur account");
+	}
+	
+	void checkBalance(){
+		
+		System.out.println("balance in ur acount is "+balance);
+	}
+	
+	//different rule for savings and current account
+	abstract void withdraw(int amount);
+	
+	
+}
+
+--------------------------------------------------
+
+
+  
+public class SavingAccount extends BankAccount{
+
+	public SavingAccount(String accountNumber, int balance) {
+		super(accountNumber, balance);
+	}
+
+	
+	
+	@Override
+	void withdraw(int amount) {
+	
+		
+		if(balance - amount >=500)//check min balance is 500 after withdrawl 
+		{
+		
+			balance -= amount;
+			System.out.println("withdrawl of rs "+amount);
+		}
+		else
+		{
+			System.out.println("insufficent balance .. plz maintain rs 500 min in ur account");
+		}
+		
+		
+	}
+}
+
+
+-----------------------------------------
+
+
+  
+public class CurrentAccount extends BankAccount{
+
+	public CurrentAccount(String accountNumber, int balance) {
+		super(accountNumber, balance);
+	}
+
+	
+	
+	@Override
+	void withdraw(int amount) {
+	
+		
+		if(amount<=balance) 
+		{
+		
+			balance -= amount;
+			System.out.println("withdrawl of rs "+amount);
+		}
+		else
+		{
+			System.out.println("insufficent balance ..");
+		}
+		
+		
+	}
+
+	
+}
+
+
+----------------------------------------------
+
+
+
+  
+public class BankingService {
+
+	public static void main(String[] args) {
+
+		BankAccount savAcc=new  SavingAccount("sv123",1000);
+		BankAccount curAcc=new  CurrentAccount("cr123",1000);
+		
+		
+		savAcc.checkBalance();
+		savAcc.deposit(500);
+		
+		savAcc.withdraw(900);
+		savAcc.checkBalance();
+		
+		savAcc.withdraw(300);
+		savAcc.checkBalance();
+//====================================
+		
+		System.out.println("current account");
+		
+		
+
+		curAcc.checkBalance();
+		curAcc.deposit(500);
+		
+		curAcc.withdraw(900);
+		curAcc.checkBalance();
+		
+		curAcc.withdraw(300);
+		curAcc.checkBalance();		
+		
+	}
+
+}
+
+
+

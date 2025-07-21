@@ -1,0 +1,55 @@
+
+//non related classes can share common behivior uin such case create interfaces
+// interfaces are set of rules
+//interface is set of abstract method
+//interface methods dont have body
+//all interface methods are public and abstract by default
+
+public interface Flyer {
+
+	 void fly();
+	
+}
+
+
+
+-------------------------------
+
+// class implements interface
+//class extends class 
+//class can implement more than one interface
+
+//interface and interface can be parent and child means interface can extend another interface
+
+// if u r implementing child interface u must override all the methods from 
+//child interface and parent interface since child inherits all the parent behavior
+
+
+//interface extends class ? not Possible
+//interface implements interface ? not possible
+
+
+interface FlyerChild extends Flyer{
+	
+	//fly() inherited from parent 
+	void childMethodFly();
+}
+
+
+public class InterfaceTest implements FlyerChild{
+
+	public void childMethodFly() {
+		
+	}
+
+	public void fly() {
+		
+	}
+	public static void main(String[] args) {
+
+	}
+
+}
+
+
+

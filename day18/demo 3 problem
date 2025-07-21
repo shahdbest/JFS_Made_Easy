@@ -1,0 +1,38 @@
+
+// why to create interface and implement it if the class only has to define the method .. 
+
+public class Eagle {
+
+	public void fly() {
+		System.out.println("Eagle flies");
+	}
+	
+}
+
+
+-----------------
+
+  
+public class FlyerService {
+
+	public static void main(String[] args) {
+
+		
+		Flyer flyer=new Bird();
+		flyer.fly();
+		
+		
+		Flyer flyer2=new Aircraft();
+		flyer2.fly();
+		
+		
+		Flyer flyer3=new SuperMan();
+		flyer3.fly();
+		//flyer3.savesLife();
+		
+		Eagle e=new Eagle();
+		e.fly();
+		
+	}
+
+}

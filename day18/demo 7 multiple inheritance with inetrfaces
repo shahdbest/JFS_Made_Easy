@@ -1,0 +1,57 @@
+
+
+public interface Flyer {
+
+	 void fly();
+	
+}
+
+--------------------------
+
+  
+public interface InterDemo {
+
+	void demo();
+}
+
+
+----------------------------------
+// multiple inheritance is possible with interfaces 
+//meaning an interface can extend more than one interface
+
+
+
+
+interface demoInter extends Flyer, InterDemo{
+	//demo() from interDemo
+	//fly() from Flyer
+	void somethingElse();
+}
+
+
+public class InterfaceTest implements demoInter{
+
+	
+	@Override
+	public void demo() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+@Override
+public void somethingElse() {
+	// TODO Auto-generated method stub
+	
+}
+  
+@Override
+	public void fly() {
+		
+	}
+	public static void main(String[] args) {
+
+	}
+
+}
+
+

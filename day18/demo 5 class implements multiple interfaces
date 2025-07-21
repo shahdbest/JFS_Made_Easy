@@ -1,0 +1,72 @@
+
+
+//non related classes can share common behivior uin such case create interfaces
+// interfaces are set of rules
+//interface is set of abstract method
+//interface methods dont have body
+//all interface methods are public and abstract by default
+
+public interface Flyer {
+
+	 void fly();
+	
+}
+
+
+--------------------------
+
+
+  
+public interface InterDemo {
+
+	void demo();
+}
+
+
+
+-------------------------
+public class Bird implements Flyer,InterDemo{
+
+	@Override
+	public void fly() {
+		System.out.println("bird flies");
+	}
+
+	
+public void eats() {
+		
+	}
+	
+	public void hunt() {
+		
+	}
+
+
+	@Override
+	public void demo() {
+
+		System.out.println("method from interdemo ");
+	}
+}
+
+-------------------------
+
+
+  
+public class FlyerService {
+
+	public static void main(String[] args) {
+
+		
+		Bird bird=new Bird();
+		bird.demo();
+		bird.fly();
+		bird.eats();
+		
+		
+		
+	}
+
+}
+
+

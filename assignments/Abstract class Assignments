@@ -1,0 +1,115 @@
+📘 Java Abstract Class Assignments with HINTS (No Pseudocode)
+
+✅ 1. Online Course Platform
+📄 Description:
+Create an abstract class OnlineCourse and implement subclasses like JavaCourse and PythonCourse. Each course should provide its own course material.
+
+💡 Hint:
+
+Use an abstract method getCourseMaterial() in the base class.
+
+Each subclass should override it with its specific material.
+
+Use a method like displayCourseInfo() for shared info.
+
+✅ 2. Employee Salary System
+📄 Description:
+Create an abstract class Employee with a method to calculate salary. Subclasses like FullTimeEmployee and PartTimeEmployee should implement it differently.
+
+💡 Hint:
+
+Keep calculateSalary() abstract in Employee.
+
+In FullTimeEmployee, use base salary and bonus.
+
+In PartTimeEmployee, use hours × rate.
+
+Also include a method to display basic employee details.
+
+✅ 3. Appliance Startup Example
+📄 Description:
+Abstract class with a constructor and a method start(). Create WashingMachine class that extends the base class and overrides the start behavior.
+
+💡 Hint:
+
+Print a message from the constructor of the abstract class.
+
+Show that constructors are executed even in abstract classes.
+
+The subclass should provide a unique message in the start() method.
+
+✅ 4. Exam Evaluation System
+📄 Description:
+Create a base abstract class Exam with a method evaluate(). Subclasses like OnlineExam and OfflineExam should implement the evaluation differently.
+
+💡 Hint:
+
+Use subject as a property.
+
+Let evaluate() be abstract and define different logic/messages in each subclass.
+
+✅ 5. Device Boot Example
+📄 Description:
+Create an abstract class Device with methods bootUp() and shutDown(). Subclasses like Laptop and Smartphone should provide their own implementations.
+
+💡 Hint:
+
+Add two abstract methods for startup and shutdown behavior.
+
+Use meaningful and device-specific messages in each subclass.
+
+🔁 Java Dynamic Method Dispatch Assignments with HINTS (No Pseudocode)
+✅ 1. Payment Gateway Simulation
+📄 Description:
+Base class Payment with subclasses UPIPayment and CardPayment. Use a reference of type Payment to call overridden methods.
+
+💡 Hint:
+
+Call pay() method using the base class reference.
+
+Change the object assigned to the reference to see different outputs.
+
+Demonstrates runtime polymorphism.
+
+✅ 2. Document Viewer Example
+📄 Description:
+Class DocumentViewer is extended by PDFViewer and WordViewer. Depending on the type, a different document is opened.
+
+💡 Hint:
+
+Override the openDocument() method in each subclass.
+
+Use base class reference to hold subclass object and call the method.
+
+Output should vary based on the object type.
+
+✅ 3. Travel Booking System
+📄 Description:
+Use Transport as a superclass with method bookTicket(). Create Bus, Train, and Flight subclasses.
+
+💡 Hint:
+
+Each subclass should override bookTicket() with its own message.
+
+Demonstrates how one interface (Transport) can support many behaviors.
+
+✅ 4. Notification Sender
+📄 Description:
+Create a class NotificationSender with subclasses like EmailSender, SmsSender, and PushNotificationSender.
+
+💡 Hint:
+
+Override the send() method in each subclass.
+
+Use the base class reference to call send() and observe output changes.
+
+✅ 5. Student Grading System
+📄 Description:
+Create a class Grader with method gradeStudent(). Subclasses UndergraduateGrader and PostgraduateGrader grade differently.
+
+💡 Hint:
+
+Override the grading method to apply different grading logic.
+
+Use the same reference variable (Grader) to hold different objects and test output.
+

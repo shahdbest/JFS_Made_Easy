@@ -1,0 +1,98 @@
+package packone;
+
+public interface AllowPrinting {
+
+}
+
+
+----------------------------------
+
+  package packone;
+
+public abstract class Document {
+
+	abstract String myData();
+}
+
+
+----------------------------
+
+  package packone;
+
+public class MyDocument extends Document implements AllowPrinting{
+
+	
+	String myData()
+
+	{
+		return "this is my printable data";
+	}
+	
+}
+
+---------------------------------
+
+
+  package packone;
+
+public class MyDoc2 extends Document{
+
+	
+
+	String myData()
+
+	{
+		return "this is my secure data";
+	}
+	
+}
+
+
+-------------
+
+
+package packone;
+
+public class MyPrinter {
+
+	void printDocument(Document doc){
+	
+		if(doc instanceof AllowPrinting) {
+		System.out.println(doc.myData());
+		}
+		else
+			System.out.println("this document cannot be printed");
+	}
+	
+	
+}
+
+
+------------------------------
+
+
+
+  package packone;
+
+public class PrinterService {
+
+	public static void main(String[] args) {
+
+		
+		Document doc1=new MyDocument();
+		MyPrinter printer=new MyPrinter();
+		printer.printDocument(doc1);
+		
+		
+		Document doc2=new MyDoc2();
+		printer.printDocument(doc2);
+		
+		
+	}
+
+}
+
+
+
+  
+  

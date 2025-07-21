@@ -1,0 +1,32 @@
+// eagle class can be creatred without a fly method as there is no such rule to create a class with fly method
+public class Eagle {
+
+
+	
+	public void eats() {
+		
+	}
+	
+	public void hunt() {
+		
+	}
+}
+
+
+--------------------
+
+
+//Error creating Bird class coz bird implements Flyer it has to define the fly method which is a rule
+  
+public class Bird implements Flyer{
+
+
+	
+public void eats() {
+		
+	}
+	
+	public void hunt() {
+		
+	}
+}

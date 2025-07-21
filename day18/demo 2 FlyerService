@@ -1,0 +1,21 @@
+
+public class FlyerService {
+
+	public static void main(String[] args) {
+
+		
+		Flyer flyer=new Bird();
+		flyer.fly();
+		
+		
+		Flyer flyer2=new Aircraft();
+		flyer2.fly();
+		
+		
+		Flyer flyer3=new SuperMan();
+		flyer3.fly();
+		//flyer3.savesLife();
+		
+	}
+
+}

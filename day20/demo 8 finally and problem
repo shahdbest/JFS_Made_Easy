@@ -1,0 +1,33 @@
+
+//try catch finally throw throws
+
+// finally gets executed irrespective of try or catch -- used to release the resource
+public class ExceptionDemo {
+
+	public static void main(String[] args) {
+
+		
+		System.out.println("line 1");
+
+		try {
+		System.out.println(10/0);
+		System.out.println("try");
+		}
+		catch (Exception e) {
+			System.out.println("CATCH -- exception caught "+e +" "+e.getMessage());
+		}
+//		finally {
+//		
+//			System.out.println("finally block");
+//		}
+
+		
+		System.out.println("without finally");
+		System.out.println("line 3");
+		
+	}
+
+}
+
+
+

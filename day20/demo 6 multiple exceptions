@@ -1,0 +1,38 @@
+
+//try catch finally throw throws
+
+public class ExceptionDemo {
+
+	public static void main(String[] args) {
+
+		
+		System.out.println("line 1");
+
+		int[] x= {2,0};
+		
+		
+		try {
+		System.out.println(10/x[3]);
+
+		System.out.println(10/x[0]);
+		System.out.println("hello");
+		}
+		catch (ArithmeticException e) {
+		
+			e.printStackTrace();
+		}
+		catch (ArrayIndexOutOfBoundsException e) {
+			
+			e.printStackTrace();
+		}
+		
+		
+		System.out.println("line 3");
+		
+		
+	}
+
+}
+
+
+

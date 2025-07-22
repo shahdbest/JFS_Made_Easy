@@ -1,0 +1,59 @@
+//abnormal condition occurs during program execution and 
+//terminates the flow of a program
+
+// exception handling is all about protecting our program from being terminated
+
+//try catch finally throw throws
+
+public class ExceptionDemo {
+
+	public static void main(String[] args) {
+
+		
+		System.out.println("line 1");
+
+		int[] x= {2,0};
+		
+		try {
+		System.out.println(10/x[3]);
+		}
+		catch (ArithmeticException e) {
+			
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		}
+		catch (ArrayIndexOutOfBoundsException e) {
+		System.out.println("array problem");
+		System.out.println(e.getMessage());
+			//e.printStackTrace();	
+			
+		}
+		
+		
+		System.out.println("line 3");
+		
+		
+	}
+
+}
+
+
+//Checked exceptions
+
+/*
+ * these r checked by the compiler
+ * u must handle them - using try - catch or we can declare throws(meaning we r redirecting the exception to the caller) 
+ * usually for recoverable situation (like file not found or network issue)
+ * 
+ * */
+
+//Unchecked exceptions
+
+/*
+* these r not checked by the compiler
+* occurs due to code bug -- programming mistake  
+* optional to handle
+* */
+
+
+

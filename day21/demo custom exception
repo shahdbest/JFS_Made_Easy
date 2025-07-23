@@ -1,0 +1,61 @@
+
+public class InvalidMarksException extends Exception{
+
+	public InvalidMarksException(String message) {
+		super(message);
+	}
+}
+
+
+--------------------------------
+
+  
+public class Exam {
+
+	
+	void marksEntry(int marks) throws InvalidMarksException
+	{
+		
+		if(marks > 100 || marks < 0)
+			throw new InvalidMarksException("Invalid marks Entered plz check");
+		else
+			System.out.println("you have scored "+marks +" marks");
+	}
+	
+	
+}
+
+
+-----------------------------
+
+
+  
+//try catch finally throw throws
+
+// finally gets executed irrespective of try or catch -- used to release the resource
+// throw is used to raise an exception
+
+
+
+public class ExceptionDemo {
+	
+	public static void main(String[] args) {
+
+		
+		Exam exam=new Exam();
+		
+		try {
+			exam.marksEntry(-12);
+			
+		} catch (InvalidMarksException e) {
+			// TODO Auto-generated catch block
+			//e.printStackTrace();
+		System.out.println("catch");
+			System.out.println(e.getMessage());
+		}
+		
+		}
+}
+
+
+

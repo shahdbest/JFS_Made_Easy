@@ -1,0 +1,39 @@
+
+//try catch finally throw throws
+
+// finally gets executed irrespective of try or catch -- used to release the resource
+// throw is used to raise an exception
+
+
+import java.io.FileNotFoundException;
+
+public class ExceptionDemo {
+	
+	public static void main(String[] args) {
+
+		
+		
+		System.out.println("line 1");
+		
+		//throw new FileNotFoundException();
+		
+		//-------------------------------
+//		try {
+//		throw new ArithmeticException();
+//		}
+//		catch (Exception e) {
+//			// TODO: handle exception
+//		}
+		
+		//---------------------------
+		
+		
+		//System.out.println("line 3");
+		
+		
+		//throw new ArithmeticException();
+	}
+}
+
+
+

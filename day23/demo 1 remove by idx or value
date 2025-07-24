@@ -1,0 +1,33 @@
+
+//Collection : collection of elements of type Object
+
+// list can contain duplicates .. ordered 
+import java.util.Vector;
+
+public class CollectionsDemo {
+
+	public static void main(String[] args) {
+		
+		//Collections work with Objects (wrapper classes)
+		//Vector<Integer> rollNos=new Vector<>();
+		Vector<Integer> rollNos=new Vector<Integer>();
+		
+		
+		
+		int x=11;
+		
+		rollNos.add(x); // auto boxing
+		rollNos.add(20);
+		rollNos.add(30);
+		rollNos.add(40);
+		//rollNos.add("hello world");
+		rollNos.add(2, 2000);
+		System.out.println(rollNos);
+	
+		System.out.println(rollNos.get(0));
+		//rollNos.remove(30); error 30 is considered as idx position
+		Integer i=30;
+		rollNos.remove(i);
+		System.out.println(rollNos);
+	}
+}

@@ -1,0 +1,53 @@
+
+// vector -> thread safe -> slow -> multi-threaded apps
+//ArrayList -> not thread safe-fast -> single-threaded apps
+
+//Collection : collection of elements of type Object
+
+// list can contain duplicates .. ordered 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+
+
+public class CollectionsDemo {
+
+	public static void main(String[] args) {
+		
+		//Collections work with Objects (wrapper classes)
+		//Vector<Integer> rollNos=new Vector<>();
+	
+		
+		ArrayList<Integer> rollNos=new ArrayList<Integer>(10);
+		
+		
+		
+		
+		rollNos.add(11); // auto boxing
+		rollNos.add(111);
+		rollNos.add(13);
+		rollNos.add(150);
+		rollNos.add(14);
+		rollNos.add(1);
+		
+		
+		System.out.println(rollNos);
+		
+		// Collection -> interface  vs Collections -> Class
+		
+		Collections.sort(rollNos);
+		
+		System.out.println("after sort");
+		System.out.println(rollNos);
+		
+		
+		System.out.println("desc sort");
+		
+		Collections.sort(rollNos, Collections.reverseOrder());
+		System.out.println(rollNos);
+		
+		
+		
+		
+	}
+}

@@ -1,0 +1,47 @@
+
+//Collection : collection of elements of type Object
+
+// list can contain duplicates .. ordered 
+import java.util.Vector;
+
+public class CollectionsDemo {
+
+	public static void main(String[] args) {
+		
+		Vector v=new Vector();
+		
+		int x=10;
+		float y=10.5f;
+		String z="hello";
+		
+		v.add(x);
+		v.add(y);
+		v.add(z);
+		
+System.out.println(v);		
+System.out.println(v.size());	
+
+	v.add("world");
+	System.out.println(v.size());	
+	System.out.println(v);	
+	
+	v.insertElementAt("john", 1);
+	System.out.println("after insert");	
+	
+	System.out.println(v);	
+
+
+	v.remove(2);
+
+	System.out.println("after remove");	
+	
+	System.out.println(v);	
+	
+	int r=10;
+	v.add(r);
+	System.out.println(v);	
+	
+	
+	
+	}
+}

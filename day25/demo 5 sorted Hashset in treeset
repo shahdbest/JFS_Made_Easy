@@ -1,0 +1,47 @@
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.TreeSet;
+
+
+//set -> unordered , unique
+// TreeSet -> a sorted set -> Tree set is sorted by default
+public class SetDemo {
+
+	
+	static Set<Integer> getNumbers()
+	{
+		Set<Integer> mySet=new HashSet<Integer>();
+		
+		mySet.add(40);
+		mySet.add(60);
+		mySet.add(30);
+		mySet.add(30);
+		mySet.add(20);
+		mySet.add(10);
+		mySet.add(10);
+		mySet.add(70);
+		
+		
+	return mySet;
+	}
+	
+	
+	public static void main(String[] args) {
+
+		
+	Set<Integer> numbers=getNumbers();		
+		
+	System.out.println(numbers);
+		
+	System.out.println("after sorting");
+	Set<Integer> sortedNumbers=new TreeSet<>(numbers);
+	System.out.println(sortedNumbers);
+	
+	
+	
+	
+	
+	}
+
+}

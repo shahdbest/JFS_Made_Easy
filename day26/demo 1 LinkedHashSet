@@ -1,0 +1,46 @@
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.Set;
+import java.util.TreeSet;
+
+
+//set -> unordered , unique
+// TreeSet -> a sorted set -> Tree set is sorted by default
+public class SetDemo {
+
+	
+	static Set<Player> getPlayers()
+	{
+		Set<Player> players=new LinkedHashSet<>();
+			
+		
+		Player p1=new Player("virat", 18, "Batsman");
+		Player p2=new Player("rohit", 45, "Batsman");
+		Player p3=new Player("bumrah", 16, "Bowler");
+		Player p4=new Player("abd", 17, "Batsman");
+		Player p5=new Player("zaheer", 55, "Bowler");
+	
+		players.add(p5);
+		players.add(p4);
+		players.add(p3);
+		players.add(p2);
+		players.add(p1);
+	return players;
+	}
+	
+	
+	public static void main(String[] args) {
+
+		
+		
+	Set<Player> players= getPlayers();
+	
+	
+		
+	for(Player p:players)
+			System.out.println(p);
+	
+	}
+
+}

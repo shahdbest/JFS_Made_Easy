@@ -1,0 +1,95 @@
+
+
+public class Player {
+
+	
+	private String name;
+	private int jersyNo;
+	private String role;
+	
+	public Player() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Player(String name, int jersyNo, String role) {
+		super();
+		this.name = name;
+		this.jersyNo = jersyNo;
+		this.role = role;
+	}
+
+	@Override
+	public String toString() {
+		return "Players [name=" + name + ", jersyNo=" + jersyNo + ", role=" + role + "]";
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getJersyNo() {
+		return jersyNo;
+	}
+
+	public void setJersyNo(int jersyNo) {
+		this.jersyNo = jersyNo;
+	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+	
+	
+	
+}
+
+
+
+----------------------------------------------
+
+// list can contain duplicates .. ordered 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+
+
+public class CollectionsDemo {
+
+	public static void main(String[] args) {
+		
+		
+		Player p1=new Player("virat", 18, "Batsman");
+		Player p2=new Player("rohit", 45, "Batsman");
+		Player p3=new Player("bumrah", 16, "Bowler");
+		Player p4=new Player("abd", 17, "Batsman");
+		Player p5=new Player("zaheer", 55, "Bowler");
+		
+		List<Player> players=new ArrayList<>();
+		
+		
+		players.add(p1);
+		players.add(p2);
+		players.add(p3);
+		players.add(p4);
+		players.add(p5);
+		
+		
+		for(Player player:players)
+		{
+			
+			System.out.println(player);
+		}
+		
+		
+	
+	}
+}

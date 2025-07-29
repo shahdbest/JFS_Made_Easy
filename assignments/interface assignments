@@ -1,0 +1,155 @@
+**Assignment 1: Online Payment Gateway Interface**
+
+Problem Statement:
+Design an interface PaymentGateway with the method processPayment(double amount, String mode).
+Implement this in CreditCardPayment and UPIPayment classes.
+
+* Mode "credit": apply 2% service charge
+* Mode "upi": apply 1% service charge
+  Return string: Payment of ₹<amount> processed via <mode> (including ₹<charge> service charge)
+
+Interface:
+
+```
+interface PaymentGateway {
+    String processPayment(double amount, String mode);
+}
+```
+
+Validations:
+
+* Amount ≤ 0 → "Invalid amount"
+* Mode not "credit"/"upi" → "Invalid payment mode"
+
+Sample Input:
+CreditCardPayment p = new CreditCardPayment();
+System.out.println(p.processPayment(1000, "credit"));
+
+Expected Output:
+Payment of ₹1020.0 processed via credit (including ₹20.0 service charge)
+
+---
+
+**Assignment 2: Temperature Converter Using Interface**
+
+Problem Statement:
+Create interface Converter with method convert(double value).
+Implement two classes:
+
+* CelsiusToFahrenheit (F = C \* 9/5 + 32)
+* FahrenheitToCelsius (C = (F - 32) \* 5/9)
+
+Interface:
+
+```
+interface Converter {
+    String convert(double value);
+}
+```
+
+Validations:
+
+* Celsius < -273.15 → "Invalid temperature"
+* Fahrenheit < -459.67 → "Invalid temperature"
+
+Sample Input:
+Converter c = new CelsiusToFahrenheit();
+System.out.println(c.convert(0));
+
+Expected Output:
+0.0°C = 32.0°F
+
+---
+
+**Assignment 3: Student Grading System**
+
+Problem Statement:
+Interface GradingSystem with method calculateGrade(int marks).
+Implement in class SchoolGrading with rules:
+
+* 90–100 → A, 75–89 → B, 60–74 → C, 40–59 → D, <40 → F
+
+Interface:
+
+```
+interface GradingSystem {
+    String calculateGrade(int marks);
+}
+```
+
+Validations:
+
+* Marks < 0 or > 100 → "Invalid marks"
+
+Sample Input:
+GradingSystem g = new SchoolGrading();
+System.out.println(g.calculateGrade(82));
+
+Expected Output:
+Student scored 82 → Grade: B
+
+---
+
+**Assignment 4: Shape Area Calculator**
+
+Problem Statement:
+Create interface Shape with method double calculateArea().
+Implement classes:
+
+* Triangle (base, height) → area = 0.5 × base × height
+* Square (side) → area = side × side
+
+Interface:
+
+```
+interface Shape {
+    double calculateArea();
+}
+```
+
+Validations:
+
+* Any dimension ≤ 0 → "Invalid dimensions"
+
+Sample Input:
+Shape s = new Triangle(5, 10);
+System.out.println(s.calculateArea());
+
+Expected Output:
+25.00
+
+---
+
+**Assignment 5: Login Authenticator**
+
+Problem Statement:
+Create interface Authenticator with method boolean login(String username, String password).
+Implement in EmailAuthenticator. Accept only:
+
+* username: "[admin@example.com](mailto:admin@example.com)"
+* password: "Admin\@123"
+
+Interface:
+
+```
+interface Authenticator {
+    boolean login(String username, String password);
+}
+```
+
+Validations:
+
+* Empty username/password → "Credentials required"
+* Match → "Login successful"
+* Else → "Login failed"
+
+Sample Input:
+Authenticator a = new EmailAuthenticator();
+System.out.println(a.login("[admin@example.com](mailto:admin@example.com)", "Admin\@123"));
+
+Expected Output:
+Login successful
+
+---
+
+Let me know if you'd like the same structure for **abstract class**, **string manipulation**, or **inheritance** next — or if you want this converted into a Word/PDF handout.

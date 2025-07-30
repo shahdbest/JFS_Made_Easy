@@ -1,0 +1,32 @@
+
+//FIFO
+
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
+public class QueueDemo {
+
+	public static void main(String[] args) {
+		
+		
+		
+		
+		Queue<String> citiesQ=new LinkedList<String>();
+		
+		citiesQ.add("bangalore");
+		citiesQ.add("pune");
+		citiesQ.add("mumbai");
+		
+		
+		
+		System.out.println(citiesQ);
+		
+		
+		//System.out.println(citiesQ.pollLast());
+		//error pollLast not available
+		
+		
+	}
+	
+}

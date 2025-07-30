@@ -1,0 +1,49 @@
+
+//FIFO
+
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
+public class QueueDemo {
+
+	public static void main(String[] args) {
+		
+		
+		List<String> cities=new LinkedList<String>();
+		
+		Queue<String> citiesQ=new LinkedList<String>();
+		
+		citiesQ.add("bangalore");
+		citiesQ.add("pune");
+		citiesQ.add("mumbai");
+		
+		
+		
+		System.out.println(citiesQ);
+		
+		//System.out.println(citiesQ.peek());
+		
+		//System.out.println(citiesQ.poll());
+		
+		
+		
+		System.out.println(citiesQ.peek()); //retrives fst element
+		
+
+		System.out.println("after peek");
+		
+		System.out.println(citiesQ);
+		
+		//System.out.println(citiesQ.peek());retrives fst element
+	
+
+		System.out.println(citiesQ.poll()); // retrives and removes fst element
+		System.out.println("after poll");
+		System.out.println(citiesQ);
+		
+		System.out.println(citiesQ.poll());
+	
+	}
+	
+}

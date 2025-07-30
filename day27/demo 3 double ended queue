@@ -1,0 +1,36 @@
+
+//FIFO
+
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
+public class QueueDemo {
+
+	public static void main(String[] args) {
+		
+		
+		
+		
+		Deque<String> citiesQ=new LinkedList<String>();
+		
+		citiesQ.add("bangalore");
+		citiesQ.add("pune");
+		citiesQ.add("mumbai");
+		
+		
+		
+		System.out.println(citiesQ);
+		
+		
+		System.out.println(citiesQ.pollLast());
+		
+		System.out.println(citiesQ);
+		
+		citiesQ.offerFirst("mysore");
+		System.out.println(citiesQ);
+		
+	}
+	
+}

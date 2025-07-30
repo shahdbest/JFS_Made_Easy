@@ -1,0 +1,29 @@
+
+//FIFO
+
+import java.util.Deque;
+import java.util.concurrent.ArrayBlockingQueue;
+
+public class QueueDemo {
+
+	public static void main(String[] args) {
+		
+		
+		
+		
+		ArrayBlockingQueue<String> citiesQ=new ArrayBlockingQueue<>(3);
+		
+		citiesQ.offer("bangalore");
+		citiesQ.offer("pune");
+		citiesQ.add("mumbai");
+
+		//citiesQ.add("bijapur"); exception queue is full
+		
+		citiesQ.offer("bijapur");
+		
+		System.out.println(citiesQ);
+		
+		
+	}
+	
+}

@@ -1,0 +1,37 @@
+
+//FIFO
+
+import java.util.PriorityQueue;
+import java.util.Queue;
+
+public class QueueDemo {
+
+	public static void main(String[] args) {
+		
+		Queue<Player> pqueue=new PriorityQueue<>(new PlayerNameSort());
+		
+		
+
+		Player p1=new Player("virat", 18, "Batsman");
+		Player p2=new Player("rohit", 45, "Batsman");
+		Player p3=new Player("bumrah", 16, "Bowler");
+		Player p4=new Player("abd", 17, "Batsman");
+		Player p5=new Player("zaheer", 55, "Bowler");
+	
+		pqueue.add(p5);
+		pqueue.add(p4);
+		pqueue.add(p3);
+		pqueue.add(p2);
+		pqueue.add(p1);
+	
+		
+		System.out.println(pqueue.poll());
+		System.out.println(pqueue.poll());
+		System.out.println(pqueue.poll());
+		System.out.println(pqueue.poll());
+		System.out.println(pqueue.poll());
+		System.out.println(pqueue.poll());
+		
+	}
+	
+}

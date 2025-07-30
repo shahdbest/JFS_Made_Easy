@@ -1,0 +1,264 @@
+
+---
+
+### 🔹 **Assignment 1: Unique Words from Input**
+
+**Problem Statement:**
+Write a program that reads a paragraph of text and prints all unique words in sorted order.
+
+**Class Structure:**
+`public class UniqueWordsProcessor`
+
+**Requirements:**
+
+* Use a suitable `Set` implementation to ensure uniqueness.
+* Ignore punctuation and case sensitivity.
+* Output the words in **lexicographical (alphabetical)** order.
+
+**Sample Input:**
+`"Java is great. Java is powerful!"`
+
+**Sample Output:**
+`[great, is, java, powerful]`
+
+**Instructions:**
+
+* Use `TreeSet<String>` to maintain order.
+* Use regex to split words.
+* Convert to lowercase before adding to the set.
+
+---
+
+### 🔹 **Assignment 2: Recent Browser History**
+
+**Problem Statement:**
+Create a class that maintains the most recent N unique browser URLs visited.
+
+**Class Structure:**
+`public class BrowserHistory`
+
+* `void visit(String url)`
+* `List<String> getRecentUrls()`
+
+**Requirements:**
+
+* Preserve insertion order.
+* Avoid duplicates (if a URL is visited again, move it to the latest position).
+* Maximum size of history is `N` (e.g., 5).
+
+**Sample Input:**
+
+```java
+visit("google.com");
+visit("openai.com");
+visit("google.com");
+visit("github.com");
+```
+
+**Sample Output (Recent URLs):**
+`[openai.com, google.com, github.com]`
+
+**Instructions:**
+
+* Use `LinkedHashSet` to maintain order and uniqueness.
+* When re-visiting a URL, remove and re-add it to refresh its position.
+
+---
+
+### 🔹 **Assignment 3: Task Prioritization System**
+
+**Problem Statement:**
+Simulate a task processing system where tasks are picked based on priority.
+
+**Class Structure:**
+`public class TaskManager`
+
+* `void addTask(String name, int priority)`
+* `String getNextTask()`
+
+**Requirements:**
+
+* Use a priority queue to manage tasks.
+* Higher priority value means higher importance.
+* If priorities are equal, use lexicographical order of name.
+
+**Sample Input:**
+
+```java
+addTask("Fix Bug", 2);  
+addTask("Code Review", 3);  
+addTask("Write Docs", 2);
+```
+
+**Sample Output:**
+`getNextTask()` → `"Code Review"`
+
+**Instructions:**
+
+* Use `PriorityQueue` with a custom comparator.
+
+---
+
+### 🔹 **Assignment 4: Remove Duplicates from List**
+
+**Problem Statement:**
+Given a list of integers with possible duplicates, return a new list with duplicates removed, preserving order.
+
+**Class Structure:**
+`public class DuplicateRemover`
+
+* `List<Integer> removeDuplicates(List<Integer> input)`
+
+**Requirements:**
+
+* Maintain the order of first occurrence.
+* Do not use external libraries.
+
+**Sample Input:**
+`[1, 2, 3, 2, 4, 1, 5]`
+
+**Sample Output:**
+`[1, 2, 3, 4, 5]`
+
+**Instructions:**
+
+* Use a `LinkedHashSet` to preserve insertion order and remove duplicates.
+
+---
+
+### 🔹 **Assignment 5: Ticket Counter Simulation**
+
+**Problem Statement:**
+Simulate a queue at a ticket counter. Support adding a person and serving the next one in line.
+
+**Class Structure:**
+`public class TicketCounter`
+
+* `void enterQueue(String name)`
+* `String serveNext()`
+
+**Requirements:**
+
+* FIFO (First In First Out) behavior.
+* Throw exception or return `"No one in queue"` if trying to serve an empty queue.
+
+**Sample Input:**
+
+```java
+enterQueue("Alice");  
+enterQueue("Bob");  
+serveNext();  
+serveNext();  
+serveNext();
+```
+
+**Sample Output:**
+
+```
+Alice  
+Bob  
+No one in queue
+```
+
+**Instructions:**
+
+* Use `Queue<String>` implemented with `LinkedList<String>`.
+
+---
+
+
+
+---
+
+### 🔹 **Assignment 6: Sort Students by Marks (Using Comparable)**
+
+**Problem Statement:**
+Create a `Student` class with name and marks. Sort a list of students in descending order of marks using the `Comparable` interface.
+
+**Class Structure:**
+
+```java
+public class Student implements Comparable<Student> {
+    private String name;
+    private int marks;
+    // Constructor, Getters, Setters, compareTo
+}
+```
+
+**Requirements:**
+
+* Implement `Comparable<Student>` in the `Student` class.
+* `compareTo()` should return higher priority to students with higher marks.
+* Use `Collections.sort()` to sort the list.
+
+**Sample Input:**
+
+```java
+List<Student> students = Arrays.asList(
+    new Student("Alice", 85),
+    new Student("Bob", 92),
+    new Student("Charlie", 78)
+);
+```
+
+**Sample Output:**
+
+```text
+Bob - 92  
+Alice - 85  
+Charlie - 78
+```
+
+**Instructions:**
+
+* Override the `compareTo` method in the `Student` class.
+* Use `Collections.sort(list)` to sort.
+
+---
+
+### 🔹 **Assignment 7: Sort Products by Name and then Price (Using Comparator)**
+
+**Problem Statement:**
+Create a `Product` class with fields `name` and `price`. Sort the products first by name (alphabetically), and then by price (ascending) if names are equal.
+
+**Class Structure:**
+
+```java
+public class Product {
+    private String name;
+    private double price;
+    // Constructor, Getters, Setters
+}
+```
+
+**Requirements:**
+
+* Use `Comparator<Product>` to define custom sorting logic.
+* Chain comparators: first compare by name, then by price.
+* Use `Collections.sort(list, comparator)` or `list.sort(comparator)`.
+
+**Sample Input:**
+
+```java
+List<Product> products = Arrays.asList(
+    new Product("Laptop", 75000),
+    new Product("Phone", 40000),
+    new Product("Laptop", 70000)
+);
+```
+
+**Sample Output:**
+
+```text
+Laptop - 70000.0  
+Laptop - 75000.0  
+Phone - 40000.0
+```
+
+**Instructions:**
+
+* Create a `Comparator<Product>` using lambda or a separate class.
+* Combine comparators using `thenComparing`.
+
+---
+

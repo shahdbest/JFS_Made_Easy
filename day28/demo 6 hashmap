@@ -1,0 +1,45 @@
+
+// key and a value pair
+//keys are unique
+// 586101 -> bijapur 
+//captain -> players  Map<String,List<Player>>
+//team-players
+
+ //hashtable ----------- hashmap 
+//hashtable is thread safe - hashmap is not 
+// fast  ------------------ slow
+// no null key or value --- null key and value is allowed
+
+
+import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+public class MapsDemo {
+
+	public static void main(String[] args) {
+
+		Map<Integer, String> players=new HashMap<Integer, String>();
+		
+		
+		players.put(18, "virat");
+		players.put(45, "rohit");
+		players.put(10, "sachin");
+		players.put(1, "kl rahul");
+		players.put(null, "kl rahul");
+		players.put(null, "kl rahul test");
+		players.put(null, null);
+		
+		
+		 	for(Map.Entry<Integer, String> entry :players.entrySet()) {
+		 		
+		 		System.out.println(entry.getKey() +" "+ entry.getValue());
+		 	}
+		 
+	
+	}
+
+}

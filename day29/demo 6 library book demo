@@ -1,0 +1,192 @@
+
+public class Book {
+
+	
+	private String isbn;
+	private String title;
+	private String author;
+	
+	public Book() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Book(String isbn, String title, String author) {
+		super();
+		this.isbn = isbn;
+		this.title = title;
+		this.author = author;
+	}
+
+	public String getIsbn() {
+		return isbn;
+	}
+
+	public void setIsbn(String isbn) {
+		this.isbn = isbn;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+
+	@Override
+	public String toString() {
+		return "Book [isbn=" + isbn + ", title=" + title + ", author=" + author + "]";
+	}
+	
+	
+	
+}
+
+--------------------------------------------------------
+
+
+  import java.util.Map;
+
+public class Library {
+
+	private String name;
+	Map<String,Book> books;
+	
+	
+	public Library() {
+	
+	}
+
+
+	public Library(String name, Map<String, Book> books) {
+		super();
+		this.name = name;
+		this.books = books;
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	public Map<String, Book> getBooks() {
+		return books;
+	}
+
+
+	public void setBooks(Map<String, Book> books) {
+		this.books = books;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Library [name=" + name + ", books=" + books + "]";
+	}
+	
+	
+	public String addBook(Book book)
+	{
+		try {
+		books.put(book.getIsbn(), book);
+
+		return "book added to library";
+		}
+		catch (Exception e) {
+		
+			return "cannot add book";
+		}
+	}
+	
+	
+	public Book searchBook(String isbn)
+	{
+		try {
+			
+
+			return books.get(isbn);
+			}
+			catch (Exception e) {
+			
+				return null;
+			}
+		
+	}
+	
+	
+	
+}
+
+
+--------------------------------------------------
+
+  import java.util.HashMap;
+import java.util.Map;
+
+public class LibraryService {
+
+	public static void main(String[] args) {
+
+		
+		Book book1=new Book("#12", "My First World Cup", "virat");
+		Book book2=new Book("#13", "My Life", "rohit");
+		Book book3=new Book("#14", "secret to fitness", "virat");
+ 		
+		
+		Map<String, Book> books=new HashMap<String, Book>();
+		
+		books.put(book1.getIsbn(),book1);
+		books.put(book2.getIsbn(),book2);
+		books.put(book3.getIsbn(),book3);
+		
+		Library library=new Library("M.G Library", books);
+		
+		Map<String, Book> mgLibrarybooks=library.getBooks();
+		
+		for(Map.Entry<String, Book>  book:mgLibrarybooks.entrySet())
+		{
+			
+			System.out.println(book.getValue());
+			
+		}
+		
+		//----------------------search book
+		
+		
+		Book searchedBook= library.searchBook("#16");
+		if(searchedBook!=null)
+		
+			System.out.println("your book is here "+searchedBook);
+		else
+			System.out.println("cannot find the book u searched");
+
+		//---------------add book 
+		
+		Book book4=new Book("#16", "new book ", "virat");
+		
+		System.out.println(library.addBook(book4));
+		
+		Book searchedBook16= library.searchBook("#16");
+		if(searchedBook16!=null)
+		
+			System.out.println("your book is here "+searchedBook16);
+		else
+			System.out.println("cannot find the book u searched");
+	}
+
+}
+

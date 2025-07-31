@@ -1,0 +1,35 @@
+
+// key and a value pair
+//keys are unique
+// 586101 -> bijapur 
+//captain -> players
+//team-players
+
+import java.util.Hashtable;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+
+public class MapsDemo {
+
+	public static void main(String[] args) {
+
+		Map<Integer, String> players=new Hashtable<Integer, String>();
+		
+		
+		players.put(18, "virat");
+		players.put(45, "rohit");
+		players.put(10, "sachin");
+		players.put(1, "kl rahul");
+		
+		Set<Integer> keys=players.keySet();		
+
+		
+		for(int key:keys)
+		{
+			System.out.println(key +" "+players.get(key));
+		}
+		
+	}
+
+}

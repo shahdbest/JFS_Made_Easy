@@ -1,0 +1,32 @@
+
+// key and a value pair
+//keys are unique
+// 586101 -> bijapur 
+//captain -> players
+//team-players
+
+import java.util.Hashtable;
+import java.util.Map;
+
+public class MapsDemo {
+
+	public static void main(String[] args) {
+
+		Map<Integer, String> players=new Hashtable<Integer, String>();
+		
+		
+		players.put(18, "virat");
+		players.put(45, "rohit");
+		players.put(10, "sachin");
+		players.put(1, "kl rahul");
+		
+		//players.put(null, "test");//null pointer exception
+		//players.put(12, null);//null pointer exception
+		
+		System.out.println(players);
+	
+	System.out.println(players.get(10));
+		
+	}
+
+}

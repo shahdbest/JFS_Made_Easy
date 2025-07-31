@@ -1,0 +1,54 @@
+
+// key and a value pair
+//keys are unique
+// 586101 -> bijapur 
+//captain -> players  Map<String,List<Player>>
+//team-players
+
+import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+public class MapsDemo {
+
+	public static void main(String[] args) {
+
+		LinkedHashMap<Integer, String> players=new LinkedHashMap<Integer, String>();
+		
+		
+		players.put(18, "virat");
+		players.put(45, "rohit");
+		players.put(10, "sachin");
+		players.put(1, "kl rahul");
+		
+		
+		 	for(Map.Entry<Integer, String> entry :players.entrySet()) {
+		 		
+		 		System.out.println(entry.getKey() +" "+ entry.getValue());
+		 	
+		 	}
+		 
+		 	System.out.println("-----get first player ");
+	
+		 	System.out.println(players.firstEntry());
+		 	
+		 	System.out.println(players.pollFirstEntry());
+		 	
+		 	
+		 	
+		 	System.out.println("after poll");
+		 	System.out.println(players);
+	//------------------------------------------
+		 	
+		 	System.err.println(players.lastEntry());
+		 	System.err.println(players.pollLastEntry());
+		 	
+	}
+	
+	
+
+}

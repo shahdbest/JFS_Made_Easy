@@ -1,0 +1,130 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class LibraryService {
+
+	public static void main(String[] args) {
+
+		
+		Book book1=new Book("#12", "My First World Cup", "virat");
+		Book book2=new Book("#13", "My Life", "rohit");
+		Book book3=new Book("#14", "secret to fitness", "virat");
+ 		
+		
+		Map<String, Book> books=new HashMap<String, Book>();
+		
+		books.put(book1.getIsbn(),book1);
+		books.put(book2.getIsbn(),book2);
+		books.put(book3.getIsbn(),book3);
+		
+		Library library=new Library("M.G Library", books);
+		
+		
+		
+		Map<String, Book> mgLibrarybooks=library.getBooks();
+		
+		for(Map.Entry<String, Book>  book:mgLibrarybooks.entrySet())
+		{
+			
+			System.out.println(book.getValue());
+			
+		}
+		
+		//----------------------search book
+		
+		
+		Book searchedBook= library.searchBook("#16");
+		if(searchedBook!=null)
+		
+			System.out.println("your book is here "+searchedBook);
+		else
+			System.out.println("cannot find the book u searched");
+
+		//---------------add book 
+		
+		Book book4=new Book("#16", "new book ", "virat");
+		
+		System.out.println(library.addBook(book4));
+		
+		Book searchedBook16= library.searchBook("#16");
+		if(searchedBook16!=null)
+		
+			System.out.println("your book is here "+searchedBook16);
+		else
+			System.out.println("cannot find the book u searched");
+	
+	//----------------------------------------------------------------------
+		
+		
+
+		Book book5=new Book("#15", "new My First World Cup", "virat");
+		Book book6=new Book("#16", "new My Life", "rohit");
+		Book book7=new Book("#17", "new secret to fitness", "virat");
+ 		
+		
+		Map<String, Book> booksLib2=new HashMap<String, Book>();
+		
+		booksLib2.put(book5.getIsbn(),book5);
+		booksLib2.put(book6.getIsbn(),book6);
+		booksLib2.put(book7.getIsbn(),book7);
+		
+		Library library2=new Library("Central Library", booksLib2);
+		
+	
+		Map<String, List<Book>> libs=new HashMap<>();
+		
+		Map<String, Book> library1Books= library.getBooks();
+		
+		List<Book> booksListInLibrary1=new ArrayList<Book>();
+		for(Map.Entry<String, Book> booksInLib1:library1Books.entrySet())
+		{
+			
+			booksListInLibrary1.add(booksInLib1.getValue());	
+		}
+		
+		
+		Map<String, Book> library2Books= library2.getBooks();
+		
+		List<Book> booksListInLibrary2=new ArrayList<Book>();
+		for(Map.Entry<String, Book> booksInLib2:library2Books.entrySet())
+		{
+			
+			booksListInLibrary2.add(booksInLib2.getValue());	
+		}
+		
+		
+		libs.put(library.getName(), booksListInLibrary1);
+		libs.put(library2.getName(), booksListInLibrary2);
+		
+	//-----------------------------------------------------------------
+	
+		System.out.println("books in library 1");
+		
+		List<Book> booksSearched= libs.get(library.getName());
+			
+		for(Book bookSearchedLib1:booksSearched)
+		{
+			
+			System.out.println(bookSearchedLib1);
+		}
+	//--------------------------------------------------
+		
+		
+	System.out.println("books in library 2");
+		
+		List<Book> booksSearched2= libs.get(library2.getName());
+			
+		for(Book bookSearchedLib1:booksSearched2)
+		{
+			
+			System.out.println(bookSearchedLib1);
+		}
+			
+		
+	}
+		
+	}
+
+

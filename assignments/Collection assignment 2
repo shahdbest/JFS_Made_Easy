@@ -1,4 +1,4 @@
-Great! Below are **assignment questions on Java Collections** focused on:
+ Below are **assignment questions on Java Collections** focused on:
 
 * **List**
 * **Set**
@@ -182,4 +182,3 @@ Create a method `getTopScores(List<Integer> scores)` to return the top 3 highest
 
 ---
 
-Would you like me to generate a PDF or Word file with these assignments for sharing with your students? Or proceed with more questions (like advanced `Streams`, `Optional`, or real-life domain problems)?

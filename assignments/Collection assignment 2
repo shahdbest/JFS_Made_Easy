@@ -1,0 +1,185 @@
+Great! Below are **assignment questions on Java Collections** focused on:
+
+* **List**
+* **Set**
+* **Map**
+* **Queue**
+* **Comparator**
+* **Comparable**
+
+Each follows your preferred format: **clear problem statement**, **interface/class to be implemented**, **validation rules**, and **expected input/output** — **no pseudocode, just real-world-style tasks**.
+
+---
+
+## ✅ Java Collections Assignments
+
+---
+
+### **Assignment 1: Student Name Sorter Using List**
+
+**Problem Statement:**
+Create a class `StudentNameSorter` with a method `getSortedNames(List<String> names)` that accepts a list of student names and returns a new list sorted in alphabetical order.
+
+---
+
+**Requirements:**
+
+* If list is empty → return "Give proper input"
+* Names must be sorted case-insensitively
+* Return names as a comma-separated string
+
+---
+
+**Method Signature:**
+
+```java
+public String getSortedNames(List<String> names);
+```
+
+**Sample Input:**
+`["Zara", "mohan", "Alice"]`
+
+**Expected Output:**
+`Alice,mohan,Zara`
+
+---
+
+### **Assignment 2: Remove Duplicates Using Set**
+
+**Problem Statement:**
+Create a method `removeDuplicates(List<String> items)` which removes duplicates using a `Set` and returns unique elements in insertion order.
+
+---
+
+**Requirements:**
+
+* Use `LinkedHashSet` to preserve insertion order
+* If list is empty → return "Give proper input"
+* Return result as a comma-separated string
+
+---
+
+**Sample Input:**
+`["apple", "banana", "apple", "orange", "banana"]`
+
+**Expected Output:**
+`apple,banana,orange`
+
+---
+
+### **Assignment 3: Frequency Counter Using Map**
+
+**Problem Statement:**
+Create a class `WordFrequency` with method `countWords(List<String> words)` that counts how many times each word occurs in the list.
+
+---
+
+**Requirements:**
+
+* Return a map with word as key, count as value
+* Ignore case (i.e., "Apple" and "apple" are same)
+* If list is empty → return empty map or "No words found"
+
+---
+
+**Sample Input:**
+`["apple", "banana", "Apple", "orange", "banana"]`
+
+**Expected Output:**
+`{apple=2, banana=2, orange=1}`
+
+---
+
+### **Assignment 4: Print First and Last in Queue**
+
+**Problem Statement:**
+Use a `Queue` to simulate a service queue. Create a method `getQueueEnds(Queue<String> queue)` to return the first and last person in the queue.
+
+---
+
+**Requirements:**
+
+* Use `LinkedList` as Queue
+* If queue is empty → return "Queue is empty"
+* Return format: "First: John, Last: Alice"
+
+---
+
+**Sample Input:**
+`["John", "Maya", "Alice"]`
+
+**Expected Output:**
+`First: John, Last: Alice`
+
+---
+
+### **Assignment 5: Sort Employee by Name (Using Comparable)**
+
+**Problem Statement:**
+Create an `Employee` class with fields: `id`, `name`, and `salary`.
+Implement `Comparable<Employee>` to sort employees by their name alphabetically.
+
+---
+
+**Requirements:**
+
+* Implement `compareTo()` in Employee to compare names
+* Method `sortEmployees(List<Employee> list)` should return sorted list
+
+---
+
+**Sample Input:**
+`[new Employee(101, "Zara", 50000), new Employee(102, "Alice", 60000)]`
+
+**Expected Output:**
+Employees sorted by name:
+`Alice, Zara`
+
+---
+
+### **Assignment 6: Sort by Salary Descending (Using Comparator)**
+
+**Problem Statement:**
+Extend the previous Employee class. Now sort the list of employees by **salary in descending order** using `Comparator<Employee>`.
+
+---
+
+**Requirements:**
+
+* Create `SalaryComparator implements Comparator<Employee>`
+* Use it in a method `sortBySalaryDesc(List<Employee> list)`
+
+---
+
+**Sample Input:**
+`[Employee("A", 101, 50000), Employee("B", 102, 70000)]`
+
+**Expected Output:**
+`B, A`
+
+---
+
+### **Assignment 7: Top 3 Scores Using PriorityQueue**
+
+**Problem Statement:**
+Create a method `getTopScores(List<Integer> scores)` to return the top 3 highest scores using `PriorityQueue`.
+
+---
+
+**Requirements:**
+
+* Use a **max-heap** (reverse comparator)
+* If list has <3 items → return "Not enough scores"
+* Return a list of top 3 scores
+
+---
+
+**Sample Input:**
+`[45, 67, 89, 100, 76]`
+
+**Expected Output:**
+`[100, 89, 76]`
+
+---
+
+Would you like me to generate a PDF or Word file with these assignments for sharing with your students? Or proceed with more questions (like advanced `Streams`, `Optional`, or real-life domain problems)?

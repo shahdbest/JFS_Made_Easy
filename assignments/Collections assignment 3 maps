@@ -1,0 +1,184 @@
+ Below are **assignment questions focused specifically on Java Maps**, covering various real-life use cases like frequency counting, lookups, sorting, and transformations — structured clearly with:
+
+* ✅ Problem Statement
+* ✅ Class and Method Signature
+* ✅ Requirements / Validations
+* ✅ Sample Input & Expected Output
+
+These questions are beginner-friendly yet practical, to help students **learn actual implementation logic** using `Map`, `HashMap`, `LinkedHashMap`, and `TreeMap`.
+
+---
+
+## ✅ Java Map Assignments for Practice
+
+---
+
+### **Assignment 1: Count Character Frequency in a String**
+
+**Problem Statement:**
+Create a method `countCharacterFrequency(String input)` that counts how many times each character appears in the input string (case-insensitive).
+
+---
+
+**Class & Method:**
+
+```java
+public class CharacterCounter {
+    public Map<Character, Integer> countCharacterFrequency(String input);
+}
+```
+
+**Requirements:**
+
+* Convert string to lowercase
+* Ignore spaces
+* Return a `Map<Character, Integer>`
+* If input is empty or null → return empty map or message
+
+---
+
+**Sample Input:**
+`"Java Programming"`
+
+**Expected Output:**
+`{a=3, g=2, j=1, m=2, n=1, o=1, p=1, r=2, v=1}`
+
+---
+
+### **Assignment 2: Create a Phonebook Using Map**
+
+**Problem Statement:**
+Implement a simple phonebook using a map where key = contact name, value = phone number.
+
+---
+
+**Class & Method:**
+
+```java
+public class PhoneBook {
+    public void addContact(String name, String number);
+    public String getContact(String name);
+}
+```
+
+**Requirements:**
+
+* Use `HashMap<String, String>`
+* If contact not found → return "Contact not found"
+* Assume phone number is a string
+
+---
+
+**Sample Input:**
+
+```java
+addContact("John", "9876543210");
+getContact("John");
+getContact("Alice");
+```
+
+**Expected Output:**
+
+```
+9876543210  
+Contact not found
+```
+
+---
+
+### **Assignment 3: Word Frequency from Sentence**
+
+**Problem Statement:**
+Create a method `getWordFrequency(String sentence)` that splits a sentence into words and counts how many times each word appears.
+
+---
+
+**Class & Method:**
+
+```java
+public class WordCounter {
+    public Map<String, Integer> getWordFrequency(String sentence);
+}
+```
+
+**Requirements:**
+
+* Words are case-insensitive
+* Ignore punctuation
+* Return sorted map using `TreeMap`
+
+---
+
+**Sample Input:**
+`"This is a test. This test is easy."`
+
+**Expected Output:**
+`{a=1, easy=1, is=2, test=2, this=2}`
+
+---
+
+### **Assignment 4: Sort Map by Value (Descending)**
+
+**Problem Statement:**
+Given a map of products and their prices, return the map entries sorted by price in descending order.
+
+---
+
+**Class & Method:**
+
+```java
+public class ProductSorter {
+    public List<Map.Entry<String, Double>> sortByPriceDescending(Map<String, Double> productPrices);
+}
+```
+
+**Requirements:**
+
+* Use `Map.Entry` and custom `Comparator`
+* Sort by value (price) in descending order
+
+---
+
+**Sample Input:**
+`{ "Shoes"=2999.0, "Bag"=1999.0, "Watch"=3999.0 }`
+
+**Expected Output:**
+
+```
+Watch=3999.0  
+Shoes=2999.0  
+Bag=1999.0
+```
+
+---
+
+### **Assignment 5: Find Student with Highest Marks**
+
+**Problem Statement:**
+Create a method that receives a `Map<String, Integer>` of student names and their marks and returns the name of the student with the highest marks.
+
+---
+
+**Class & Method:**
+
+```java
+public class TopperFinder {
+    public String getTopper(Map<String, Integer> studentMarks);
+}
+```
+
+**Requirements:**
+
+* If map is empty → return "No students"
+* If two or more students have same top marks → return any one of them
+
+---
+
+**Sample Input:**
+`{ "Alice"=88, "Bob"=95, "John"=91 }`
+
+**Expected Output:**
+`Bob`
+
+---
+

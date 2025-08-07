@@ -1,0 +1,31 @@
+
+
+interface TestInter
+{
+
+	void abc();
+}
+
+
+public class Java8Demos{
+
+	public  void myMethod()
+	{
+		System.out.println("this is my method");
+		
+	}
+	
+	
+	public static void main(String[] args) {
+	
+		//TestInter t=new Java8Demos()::myMethod;
+		
+		Java8Demos j=new Java8Demos();
+		TestInter t=j::myMethod;
+		
+		
+		t.abc();
+	}
+	
+	
+}

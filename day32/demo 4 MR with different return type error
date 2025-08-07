@@ -1,0 +1,28 @@
+
+
+interface TestInter
+{
+
+	int abc();
+}
+
+
+public class Java8Demos{
+
+	public static void myMethod()
+	{
+		System.out.println("this is my method");
+		return 6;
+	}
+	
+	
+	public static void main(String[] args) {
+	
+		TestInter t=Java8Demos::myMethod; //error interface method returns some value referencing method must return same type of value
+		// t.abc();
+		 int x=t.abc();// error
+		 System.out.println(x);
+	}
+	
+	
+}

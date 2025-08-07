@@ -1,0 +1,31 @@
+
+
+interface TestInter
+{
+
+	void abc();
+}
+
+
+public class Java8Demos{
+
+	public  Java8Demos()
+	{
+		System.out.println("this is constructor");
+		
+	}
+	
+	
+	public static void main(String[] args) {
+	
+		//TestInter t=new Java8Demos()::myMethod;
+		
+		
+		TestInter t=Java8Demos::new;
+		
+		
+		t.abc();
+	}
+	
+	
+}

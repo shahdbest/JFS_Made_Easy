@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Java8Demos{
+
+	
+	public static void main(String[] args) {
+
+		List<String> test=new ArrayList<String>();
+		
+		
+		test.add("abc");
+		test.add("xyz");
+		test.add("pqr");
+		test.add("aaa");
+		
+		
+		test.forEach(x->{System.out.println(x);} );
+	
+	
+		System.out.println("---------------");
+	
+		test.forEach(System.out::println);
+	
+	}
+	
+	
+}

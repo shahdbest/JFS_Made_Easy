@@ -1,0 +1,29 @@
+
+@FunctionalInterface
+interface TestInterface
+{
+
+	int sum(int x,int y);
+}
+
+
+
+public class Java8Demos{
+
+	public static int myMethod(int x,int y) {
+		
+		System.out.println("this is my method demo");
+		return x+y;
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		TestInterface t1=Java8Demos::myMethod;
+		int x= t1.sum(30,70);
+		
+		System.out.println(x);
+	}
+	
+	
+}

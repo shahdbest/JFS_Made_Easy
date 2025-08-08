@@ -1,0 +1,49 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class Java8Demos{
+
+	
+	
+	public static void main(String[] args) {
+		
+		
+
+		Player player1=new Player("virat", 18, "batsman");
+		Player player2=new Player("rohit", 45, "batsman");
+		Player player3=new Player("sachin", 10, "batsman");
+		
+		
+		List<Player> players=new ArrayList<Player>();
+		
+		
+		players.add(player1);
+		players.add(player2);
+		players.add(player3);
+		
+		
+		Collections.sort(players, (o1,o2)->{return o1.getJersyNo() - o2.getJersyNo();} );
+
+		for(Player p:players) {
+			System.out.println(p);
+		}
+		
+	
+		players.forEach(
+				x->{
+					System.out.println(x);
+					}
+				);
+				
+
+		//-----------------------------------
+		System.out.println("below is method reference result");
+		
+		players.forEach(System.out::println);
+		
+		
+	}
+	
+	
+}

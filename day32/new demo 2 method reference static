@@ -1,0 +1,35 @@
+
+@FunctionalInterface
+interface TestInterface
+{
+
+	void abc();
+}
+
+
+
+public class Java8Demos{
+
+	public static void myMethod() {
+		
+		System.out.println("this is my method demo");
+	}
+	
+	
+	public static void main(String[] args) {
+
+		TestInterface t= ()->{
+			System.out.println("this is lambda");
+		};
+		
+		t.abc();
+		
+		
+		TestInterface t1=Java8Demos::myMethod;
+		t1.abc();
+		
+		
+	}
+	
+	
+}

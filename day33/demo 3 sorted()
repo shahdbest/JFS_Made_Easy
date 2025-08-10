@@ -1,0 +1,20 @@
+import java.util.Arrays;
+import java.util.List;
+
+public class Java8Demos{
+
+	
+	
+	public static void main(String[] args) {
+		
+		//map
+		
+		
+		List<Integer> numbers=Arrays.asList(10,20,11,13,14,18,22,19);
+		
+		numbers.stream().sorted()
+		.forEach(System.out::println);;
+	}
+	
+	
+}

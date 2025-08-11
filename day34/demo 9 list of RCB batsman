@@ -1,0 +1,36 @@
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class Java8Demos{
+
+
+	static List<Player> players=Arrays.asList(
+			
+			new Player("virat", 18, "batsman", "RCB"),
+			new Player("rohit", 45, "batsman", "MI"),
+			new Player("pant", 30, "wicket keeper", "LSG"),
+			new Player("pandya", 41, "batsman", "MI"),
+			new Player("shami", 21, "bowler", "GT"),
+			new Player("gill", 2, "batsman", "GT"),
+			new Player("rahul", 1, "batsman", "LSG"),
+			new Player("abd", 17, "batsman", "RCB"),
+			new Player("bumrah", 32, "bowler", "MI"),
+			new Player("siraj", 33, "bowler", "RCB")
+			);
+			
+	
+
+	public static void main(String[] args) {
+		//make a list of all batsman from rcb 
+		
+		List<Player> rcbBatsmans=players.stream().filter(p->p.getRole().equalsIgnoreCase("batsman"))
+		.filter(p->p.getTeam().equalsIgnoreCase("rcb"))
+		.collect(Collectors.toList());
+
+		
+		rcbBatsmans.forEach(x->{System.out.println(x);});
+		}
+	
+	
+}

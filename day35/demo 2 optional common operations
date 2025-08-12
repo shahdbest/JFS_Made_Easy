@@ -1,0 +1,70 @@
+import java.util.Optional;
+
+public class Java8Demos{
+
+	public static void main(String[] args) {
+		
+		//creating Optional Objects
+		
+		Optional<String> name=Optional.of("virat kohli");
+		Optional<String> emptyName=Optional.empty();
+		Optional<String> nullableName=Optional.ofNullable(null);
+		
+		//present
+		
+	name.ifPresent(n->{System.out.println(n);});
+	if(name.isPresent())
+	{
+		System.out.println(name.get().toUpperCase());
+	}
+	
+	if(emptyName.isPresent())
+	{
+		System.out.println(name.get().toUpperCase());
+	}
+	else
+		System.out.println("name is not present"); 
+	
+	
+	//orElse   --- orElseGet
+	
+   String defaultName=emptyName.orElse("default name");
+   System.out.println(defaultName);
+	
+   String defaultName1=name.orElse("default name");
+   System.out.println(defaultName1);
+	//---------------------------------------
+   
+   
+   
+  String returnedName= nullableName.orElseGet(()->"returned name");
+	System.out.println(returnedName);
+  
+	//-------------------------------------filter
+	
+	
+	Optional<String> filteredName=name.filter(n->n.startsWith("v"));
+	
+	filteredName.ifPresent(n->{System.out.println(n);});
+	
+	
+	//------map
+
+	
+	Optional<String> upperName=name.map(String::toUpperCase);
+	
+	upperName.ifPresent(n->{System.out.println(n);});
+	
+	//-------------orElseThrow
+	
+	String havingname=name.orElseThrow(()->new NullPointerException("name is missing") ); 
+	System.out.println(havingname);
+	
+	
+	String havingname1=emptyName.orElseThrow(()->new NullPointerException("name is missing") ); 
+	System.out.println(havingname1);
+	
+	
+	}
+	
+}

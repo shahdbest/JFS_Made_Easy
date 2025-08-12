@@ -1,0 +1,21 @@
+
+
+public class Java8Demos{
+
+	
+	static String getName()
+	{
+		return null;
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		
+		String name=getName();//might return null have to check null
+	
+		System.out.println(name.toUpperCase());	
+		
+	}
+	
+}

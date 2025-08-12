@@ -1,0 +1,44 @@
+import java.util.Optional;
+
+
+class Customer{
+	
+	private String name;
+
+	public Customer(String name) {
+		super();
+		this.name = name;
+	}
+
+	public String getName() {
+		return name;
+	}
+	
+	
+	
+}
+
+
+public class Java8Demos{
+
+	
+	public static void main(String[] args) {
+		
+		//withOptional
+		Optional<Customer> customer=Optional.empty();
+		//Optional<Customer> customer=Optional.of(new Customer("virat"));
+		
+		if(customer.isPresent())
+			System.out.println(customer.get().getName());
+		else
+			System.out.println("customer not found");
+		//-----------
+		
+		String name= customer.map(Customer::getName).orElse("default customer");
+		
+		System.out.println(name);
+		
+		
+	}
+	
+}

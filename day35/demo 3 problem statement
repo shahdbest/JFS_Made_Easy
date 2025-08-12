@@ -1,0 +1,36 @@
+import java.util.Optional;
+
+
+class Customer{
+	
+	private String name;
+
+	public Customer(String name) {
+		super();
+		this.name = name;
+	}
+
+	public String getName() {
+		return name;
+	}
+	
+	
+	
+}
+
+
+public class Java8Demos{
+
+	public static void main(String[] args) {
+		
+		//withoutOptional
+		Customer customer=null;
+		
+		if(customer!=null)
+			System.out.println(customer.getName());
+		else
+			System.out.println("customer not found");
+		
+	}
+	
+}

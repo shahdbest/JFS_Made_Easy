@@ -1,0 +1,46 @@
+import java.util.Optional;
+
+public class Java8Demos{
+
+	public static void main(String[] args) {
+		
+		//creating Optional Objects
+		
+		Optional<String> name=Optional.of("virat kohli");
+		Optional<String> emptyName=Optional.empty();
+		Optional<String> nullableName=Optional.ofNullable(null);
+		
+		//present
+		
+	name.ifPresent(n->{System.out.println(n);});
+	if(name.isPresent())
+	{
+		System.out.println(name.get().toUpperCase());
+	}
+	
+	if(emptyName.isPresent())
+	{
+		System.out.println(name.get().toUpperCase());
+	}
+	else
+		System.out.println("name is not present"); 
+	
+	
+	//orElse   --- orElseGet
+	
+   String defaultName=emptyName.orElse("default name");
+   System.out.println(defaultName);
+	
+   String defaultName1=name.orElse("default name");
+   System.out.println(defaultName1);
+	//---------------------------------------
+   
+   
+   
+  String returnedName= nullableName.orElseGet(()->"returned name");
+	System.out.println(returnedName);
+  
+	
+	}
+	
+}

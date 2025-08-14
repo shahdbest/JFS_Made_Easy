@@ -1,0 +1,43 @@
+import java.util.Optional;
+
+public class Customer {
+	static Optional<String> getName()
+	{
+		return Optional.empty();
+	}
+	
+	
+	static String getNameNoOpt()
+	{
+		return null;
+	}
+	
+	
+}
+//------------------------
+
+import java.util.Optional;
+
+public class Java8Demos{
+
+	
+	
+	
+	public static void main(String[] args) {
+		
+	
+	Optional<String> name=Customer.getName();
+	
+	
+	if(name.isPresent())
+		System.out.println(name.get().toUpperCase()); 
+	else
+		System.out.println("name is empty");
+	//--------------------------------------------------
+	
+	String val= Customer.getNameNoOpt();
+	val.toUpperCase();
+	
+	}
+	
+}

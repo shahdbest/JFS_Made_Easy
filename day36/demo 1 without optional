@@ -1,0 +1,49 @@
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+
+public class Java8Demos{
+
+	
+	List<Player> players;
+
+	
+	Java8Demos()
+	{
+		
+		players=Arrays.asList(new Player("virat", 18, "batsman"),
+				new Player("rohit", 45, "batsman"),
+				new Player("sachin", 10, "batsman"),
+				new Player("rahul", 1, "batsman"));
+		
+	}
+	
+	
+	Player findByJerseyNumber(int jerseyNo)
+	{
+		
+		for(Player p:players)
+		{
+			if(p.getJersyNo()==jerseyNo)
+				return p;
+		}
+		return null;
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		Java8Demos j=new Java8Demos();
+		Player foundplayer= j.findByJerseyNumber(11);		
+
+//have to remember "null checks" every time
+// if we forget to remember -> null pointer exception is thrown
+    
+		if(foundplayer!=null)
+		System.out.println(foundplayer.getName());
+		
+		else
+			System.out.println("player not found");
+	}
+	
+}
